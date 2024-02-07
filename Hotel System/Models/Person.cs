@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Hotel_Seystem.Models
+namespace Hotel_System.Models
 {
     public class Person
     {
