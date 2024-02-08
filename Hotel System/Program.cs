@@ -1,3 +1,5 @@
+using Hotel_System.Models;
+
 namespace Hotel_System
 {
     internal static class Program
@@ -12,6 +14,11 @@ namespace Hotel_System
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new DashBoard());
+            
+            
+            HotelDbContext dbContext = new HotelDbContext();
+
+            dbContext.Clients.Filter(e => e.Age == 50);
         }
     }
 }
