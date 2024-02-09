@@ -17,14 +17,15 @@ namespace Hotel_System.Models
         public int Rate { get; set; }
         public RoomType Type { get; set; }
         public bool IsAvailable { get; set; }
-        
+
         [NotMapped] // Not Convert to SQL Table
         public float Price =>
-            float.Parse(new CommonTable().Value) * (int)Type;
+            float.Parse(new CommonTable()[Unity.RoomPrice]) * (int)Type;
 
         #endregion
 
         // Reduce Join
         public virtual ICollection<Reservation>? Reservations { get; set; }
+            = new HashSet<Reservation>();
     }
 }

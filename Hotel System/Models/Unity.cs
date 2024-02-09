@@ -11,6 +11,8 @@ namespace Hotel_System.Models
 
         //#region Important String used in Table Configurations
 
+        public static string RoomPrice => "RoomPrice";
+
         //#endregion
     }
 }

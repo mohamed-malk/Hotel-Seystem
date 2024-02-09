@@ -23,7 +23,6 @@ namespace Hotel_System.Config
             // Constraint on Column
             builder.Property(e => e.Attend)
                 .IsRequired();
-
         }
     }
 }
