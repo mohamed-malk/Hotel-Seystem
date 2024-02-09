@@ -5,10 +5,15 @@ namespace Hotel_System.Models
 {
     public class Client : Person
     {
-        [MaxLength(20)]
+        // Proprieties
         public string Nationality { get; set; } = null!;
+        public int Points { get; set; }
+        
+        // Mapping RelationShip
+        public int? MemberShipId { get; set; }
+        public virtual MemberShip? MemberShip { get; set; }
 
-        public int MemberShipId { get; set; }
-        public virtual MemberShip MemberShip { get; set; } = null!;
+        // Reduce Join Query
+        public virtual ICollection<FeedBack>? FeedBacks { get; set; }
     }
 }

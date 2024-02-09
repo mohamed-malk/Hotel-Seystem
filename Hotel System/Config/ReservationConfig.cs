@@ -9,7 +9,7 @@ using Hotel_System.Models;
 
 namespace Hotel_System.Config
 {
-    internal class ReservationConfig : IEntityTypeConfiguration<Reservation>
+    public class ReservationConfig : IEntityTypeConfiguration<Reservation>
     {
         public void Configure(EntityTypeBuilder<Reservation> builder)
         {

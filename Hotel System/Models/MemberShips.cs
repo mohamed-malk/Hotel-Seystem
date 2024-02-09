@@ -14,4 +14,15 @@
         string Description { get; set; } = null!;
         public Advantages Advantages { get; set; }
     }
+
+    public class Vip : MemberShip
+    {
+    }
+    public class Advanced : MemberShip
+    {
+    }
+
+    public class Normal : MemberShip
+    {
+    }
 }
