@@ -1,7 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-
-namespace Hotel_System.Models
+﻿namespace Hotel_System.Models
 {
     public class Client : Person
     {
@@ -15,5 +12,6 @@ namespace Hotel_System.Models
 
         // Reduce Join Query
         public virtual ICollection<FeedBack>? FeedBacks { get; set; }
+        public virtual ICollection<Reservation>? Reservation { get; set; }
     }
 }

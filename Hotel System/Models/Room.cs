@@ -10,20 +10,21 @@ namespace Hotel_System.Models
     
     public partial class Room
     {
+        #region Proprities
+
         public int Id { get; set; }
-
         public int Number { get; set; }
-
-        [Range(1, 5)]
         public int Rate { get; set; }
-
-        [Range(0, 2)]
         public RoomType Type { get; set; }
-
-        [NotMapped]
+        public bool IsAvailable { get; set; }
+        
+        [NotMapped] // Not Convert to SQL Table
         public float Price =>
             float.Parse(new CommonTable().Value) * (int)Type;
 
-        public bool IsAvailable { get; set; }
+        #endregion
+
+        // Reduce Join
+        public virtual ICollection<Reservation>? Reservations { get; set; }
     }
 }
