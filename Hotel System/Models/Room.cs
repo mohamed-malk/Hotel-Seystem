@@ -5,7 +5,7 @@ namespace Hotel_System.Models
 {
     public enum RoomType : byte
     {
-        Single, Double, Triple
+        Single = 1, Double, Triple
     }
     
     public partial class Room
@@ -20,7 +20,7 @@ namespace Hotel_System.Models
 
         [NotMapped] // Not Convert to SQL Table
         public float Price =>
-            float.Parse(new CommonTable()[Unity.RoomPrice]) * (int)Type;
+            float.Parse(HotelDbContext.GetValue(Unity.RoomPrice)) * (int)Type;
 
         #endregion
 

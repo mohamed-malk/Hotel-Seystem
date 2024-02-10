@@ -2,7 +2,7 @@
 {
     public partial class HotelDbContext
     {
-        public string this[string key] =>
+        public static string GetValue(string key) =>
             CommonTable.Single(c => c.Key == key).Value;
     }
 }

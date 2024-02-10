@@ -13,6 +13,8 @@ namespace Hotel_System.Models
 
         public static string RoomPrice => "RoomPrice";
 
+
+        public static int I { set; get; } = 0;
         //#endregion
     }
 }

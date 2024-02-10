@@ -7,18 +7,25 @@ namespace Hotel_System.Config
     /// <summary>
     /// Configuration on Common Proprieties/Attributes for Client/Employee Entity 
     /// </summary>
-    public class PersonConfig : IEntityTypeConfiguration<Person>
+    public class PersonConfig : 
+        IEntityTypeConfiguration<Person>
     {
         /// <summary>
         /// Configuration Statements
         /// </summary>
         /// <param name="builder"> <see cref="Person"/> EntityBuilder </param>
-        public void Configure(EntityTypeBuilder<Person> builder)
+        public virtual void Configure(EntityTypeBuilder<Person> builder)
         {
+            // Use Table per Concert Class Strategy
+             // to map the Inheritance Classes  
+            builder.UseTpcMappingStrategy();
+
+            #region Shared Columns
+            
             // Primary Key
             builder.HasKey(e => e.Id);
 
-            #region Constraints on Columns 
+            #region Constraints on Columns
 
             builder.Property(p => p.UserName)
                 .IsRequired()
@@ -43,21 +50,12 @@ namespace Hotel_System.Config
 
             #endregion
 
-            // Apply Unique Constraint
+            // Apply Unique Constraints
             builder.HasIndex(p => p.UserName).IsUnique();
             builder.HasIndex(p => p.Email).IsUnique();
             builder.HasIndex(p => p.NId).IsUnique();
 
-            // Constraints
-            builder.ToTable(b => b
-                .HasCheckConstraint("EmailValidation",
-                    "[Email] like '[A-Za-z0-9+_.-]+@ (.+)$'"));
-            builder.ToTable(b => b
-                .HasCheckConstraint("NidValidation", "len([NId]) = 14"));
-
-            // Use Table per Concert Class Strategy
-            // to map the Inheritance Classes  
-            builder.UseTpcMappingStrategy();
+            #endregion
         }
     }
 }

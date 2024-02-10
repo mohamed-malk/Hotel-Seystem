@@ -13,8 +13,10 @@
         // Reduce Join Query
         public virtual ICollection<FeedBack>? FeedBacks { get; set; }
             = new HashSet<FeedBack>();
-
         public virtual ICollection<Reservation>? Reservation { get; set; }
             = new HashSet<Reservation>();
+
+
+        public override string ObjectName { get; } = "Client";
     }
 }

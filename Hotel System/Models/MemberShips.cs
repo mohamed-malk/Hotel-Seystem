@@ -9,9 +9,9 @@
     }
     public class MemberShip
     {
-        int Id { get; set; }
-        private string Name { get; set; } = null!;
-        string Description { get; set; } = null!;
+        public int Id { get; set; }
+        public string Name { get; set; } = null!;
+        public string Description { get; set; } = null!;
         public Advantages Advantages { get; set; }
     }
 
@@ -21,7 +21,6 @@
     public class Advanced : MemberShip
     {
     }
-
     public class Normal : MemberShip
     {
     }

@@ -5,6 +5,7 @@ namespace Hotel_System.Models
 {
     public partial class HotelDbContext : DbContext
     {
+        public virtual DbSet<Person> People { get; set; } = null!;
         public virtual DbSet<Employee> Employees { get; set; } = null!;
         public virtual DbSet<Client> Clients { get; set; } = null!;
         public virtual DbSet<Room> Rooms { get; set; } = null!;
@@ -13,7 +14,8 @@ namespace Hotel_System.Models
         public virtual DbSet<MemberShip> Memberships { get; set; } = null!;
         public virtual DbSet<FeedBack> FeedBacks { get; set; } = null!;
         public virtual DbSet<Payment> Payments { get; set; } = null!;
-        public virtual DbSet<CommonTable> CommonTable { get; set; } = null!;
+        
+        public static DbSet<CommonTable> CommonTable { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -27,5 +29,6 @@ namespace Hotel_System.Models
 
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(ReservationConfig).Assembly);
         }
+
     }
 }

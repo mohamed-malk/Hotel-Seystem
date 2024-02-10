@@ -31,7 +31,7 @@ namespace Hotel_System.Config
                 .IsRequired(false)
                 .HasMaxLength(100);
             builder.Property(f => f.Date)
-                .HasDefaultValue(DateTime.Today);
+                .HasDefaultValueSql("GetDate()");
 
             #endregion
 

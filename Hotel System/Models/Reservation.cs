@@ -2,7 +2,6 @@
 {
     public class Reservation
     {
-
         #region Relation Proprities
 
         public DateTime ReservationDate { get; set; }

@@ -13,7 +13,19 @@ namespace Hotel_System.Config
     {
         public void Configure(EntityTypeBuilder<Reservation> builder)
         {
-            builder.HasKey(e => new { e.ClientId, e.RoomId, e.ReservationDate });
+            // Primary Key
+            builder.HasKey(e => 
+                new { e.ClientId, e.RoomId, e.ReservationDate });
+
+            // Constraint on Column
+            builder.Property(r => r.ReservationDate)
+                .HasDefaultValueSql("GetDate()");
+            
+            // Other Constraints
+            builder.ToTable(b =>
+                b.HasCheckConstraint("CheckInValidation", "[CheckInDate] > GetDate()"));
+            builder.ToTable(b =>
+                b.HasCheckConstraint("CheckOutValidation", "[CheckOutDate] > [CheckInDate]"));
         }
     }
 }

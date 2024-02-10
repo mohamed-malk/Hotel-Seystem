@@ -1,12 +1,14 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Hotel_System.Models
 {
     /// <summary>
     /// Represent the Common Data for Person
     /// </summary>
-    public abstract partial class Person
+
+    public abstract class Person
     {
         #region Proprieties
 
@@ -24,5 +26,7 @@ namespace Hotel_System.Models
 
         #endregion
 
+
+        public abstract string ObjectName { get; }
     }
 }
