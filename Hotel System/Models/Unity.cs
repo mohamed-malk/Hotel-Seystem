@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
+﻿using System.Configuration;
 
 namespace Hotel_System.Models
 {
-     static class Unity
+    static class Unity
     {
-        public static string ConnectionString => 
-            ConfigurationManager.ConnectionStrings["Local"].ConnectionString;
+        public static string ConnectionString =>
+            ConfigurationManager.ConnectionStrings["OnLine"].ConnectionString;
 
         //#region Important String used in Table Configurations
 
