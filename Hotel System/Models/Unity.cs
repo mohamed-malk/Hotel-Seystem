@@ -5,7 +5,7 @@ namespace Hotel_System.Models
     static class Unity
     {
         public static string ConnectionString =>
-            ConfigurationManager.ConnectionStrings["LocalMoh"].ConnectionString;
+            ConfigurationManager.ConnectionStrings["LocalSab"].ConnectionString;
 
         //#region Important String used in Table Configurations
 

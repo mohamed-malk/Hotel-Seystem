@@ -1,6 +1,6 @@
 ﻿namespace Hotel_System.Models
 {
-    public class Client : Person
+    public partial class Client : Person
     {
         // Proprieties
         public string Nationality { get; set; } = null!;
