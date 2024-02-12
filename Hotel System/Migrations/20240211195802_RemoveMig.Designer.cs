@@ -4,6 +4,7 @@ using Hotel_System.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Hotel_System.Migrations
 {
     [DbContext(typeof(HotelDbContext))]
-    partial class HotelDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240211195802_RemoveMig")]
+    partial class RemoveMig
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -37,7 +40,7 @@ namespace Hotel_System.Migrations
 
                     b.HasKey("Key");
 
-                    b.ToTable("CommonTable", (string)null);
+                    b.ToTable("CommonTable");
                 });
 
             modelBuilder.Entity("Hotel_System.Models.FeedBack", b =>
@@ -70,7 +73,7 @@ namespace Hotel_System.Migrations
 
                     b.HasIndex("ClientId");
 
-                    b.ToTable("FeedBacks", null, t =>
+                    b.ToTable("FeedBacks", t =>
                         {
                             t.HasCheckConstraint("FoodRange", "[FoodQuality] > 0 and [FoodQuality] < 11");
 
@@ -104,7 +107,7 @@ namespace Hotel_System.Migrations
                     b.HasIndex("Advantages")
                         .IsUnique();
 
-                    b.ToTable("Memberships", (string)null);
+                    b.ToTable("Memberships");
 
                     b.HasDiscriminator<string>("Name").HasValue("MemberShip");
 
@@ -130,7 +133,7 @@ namespace Hotel_System.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Payments", (string)null);
+                    b.ToTable("Payments");
                 });
 
             modelBuilder.Entity("Hotel_System.Models.Person", b =>
@@ -227,7 +230,7 @@ namespace Hotel_System.Migrations
 
                     b.HasIndex("RoomId");
 
-                    b.ToTable("Reservations", null, t =>
+                    b.ToTable("Reservations", t =>
                         {
                             t.HasCheckConstraint("CheckInValidation", "[CheckInDate] > GetDate()");
 
@@ -257,7 +260,7 @@ namespace Hotel_System.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Rooms", null, t =>
+                    b.ToTable("Rooms", t =>
                         {
                             t.HasCheckConstraint("RateRange", "[Rate] > 0 and [Rate] < 6")
                                 .HasName("RateRange1");
@@ -284,7 +287,7 @@ namespace Hotel_System.Migrations
 
                     b.HasIndex("MemberShipId");
 
-                    b.ToTable("Clients", null, t =>
+                    b.ToTable("Clients", t =>
                         {
                             t.HasCheckConstraint("EmailValidation", "[Email] like '%[a-zA-z0-9.]@__%.__%' and [Email] not like '%[-+/*]%'");
 
@@ -302,7 +305,7 @@ namespace Hotel_System.Migrations
                     b.Property<float>("Salary")
                         .HasColumnType("real");
 
-                    b.ToTable("Employees", null, t =>
+                    b.ToTable("Employees", t =>
                         {
                             t.HasCheckConstraint("EmailValidation", "[Email] like '%[a-zA-z0-9.]@__%.__%' and [Email] not like '%[-+/*]%'")
                                 .HasName("EmailValidation1");

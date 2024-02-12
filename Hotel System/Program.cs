@@ -15,9 +15,21 @@ namespace Hotel_System
             ApplicationConfiguration.Initialize();
             Application.Run(new DashBoard());
 
-            HotelDbContext dbContext = new HotelDbContext();
+            HotelDbContext dbContext = new();
 
+            //dbContext.Employees.ChangeManager(dbContext.Employees.Find(6)!);
+            //dbContext.SaveChanges();
+
+            MessageBox.Show(
+                dbContext.People.Login("mohMalk", "Mohamed23Malk26").ToString()
+            );
+            //MessageBox.Show(dbContext.Employees.Find(5)!.Name);
             //dbContext.Clients.Filter(e => e.Age == 50);
+
+            //dbContext.Employees.Add(new Employee
+            //{
+            //    Address = "Cairo"
+            //})
         }
     }
 }

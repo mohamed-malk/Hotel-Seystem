@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace Hotel_System.Models
+﻿namespace Hotel_System.Models
 {
     /// <summary>
     /// Represent the Shared/General Configuration Values 
@@ -8,8 +6,8 @@ namespace Hotel_System.Models
     public class CommonTable
     {
         // Proprieties
-        public string Key { get; private set; } = null!;
-        public string Value { get; private set; } = null!;
+        public string Key { get; set; } = null!;
+        public string Value { get; set; } = null!;
 
     }
 }
