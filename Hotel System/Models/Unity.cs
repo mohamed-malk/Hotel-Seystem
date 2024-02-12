@@ -2,7 +2,16 @@
 
 namespace Hotel_System.Models
 {
-    static class Unity
+    public enum Properties
+    {
+        Id ,UserName , Email , Password ,
+        NId, Name ,Age , Gender , Address,
+
+        Salary, Attend,
+
+        Nationality, Points, MemberShipId
+    }
+static class Unity
     {
         public static string ConnectionString =>
             ConfigurationManager.ConnectionStrings["LocalMoh"].ConnectionString;

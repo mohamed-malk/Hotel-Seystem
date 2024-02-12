@@ -45,8 +45,6 @@ namespace Hotel_System.Models
             throw new TargetException("The Entity Must be one of the Entities in DbContext");
         }
 
-        #region Person Region
-
         /// <summary>
         /// Constraints on <see cref="Client"/> | <see cref="Employee"/> only 
         /// </summary>
@@ -62,106 +60,5 @@ namespace Hotel_System.Models
             builder.ToTable(b => b
                 .HasCheckConstraint("NidValidation", "len([NId]) = 14"));
         }
-
-        /// <summary>
-        /// Login to System
-        /// </summary>
-        /// <returns>Login Successfully or Not </returns>
-        public static bool Login(this DbSet<Person> source,
-            string userName, string password) => source.SingleOrDefault(p =>
-            p.UserName == userName && p.Password == password) != null;
-
-        #endregion
-
-        #region Employee Region
-
-        /// <summary>
-        /// Add Manager
-        /// </summary>
-        /// <returns><see cref="Employee"/> Manger</returns>
-        /// <exception cref="Exceptions.AlreadyExistException"></exception>
-        public static Employee CreateManager(this DbSet<Employee> source,
-            string userName, string email, string password,
-            string nId, string name, int age, bool gender, string address,
-            int attend, float salary)
-            => source.Find(Employee.ManagerId) == null
-                ? new Employee
-                {
-                    Id = Employee.ManagerId,
-                    UserName = userName,
-                    Password = password,
-                    Address = address,
-                    Age = age,
-                    Attend = attend,
-                    Email = email,
-                    Gender = gender,
-                    Name = name,
-                    NId = nId,
-                    Salary = salary
-                }
-                : throw Exceptions.AlreadyExistException("Manager");
-
-        /// <summary>
-        /// Make the Employee is a Manager, in case No Manger is existed
-        /// </summary>
-        /// <param name="source"></param>
-        /// <param name="manger">The Employee that will be a Manger</param>
-        /// <returns><see cref="Employee"/>Manger</returns>
-        /// <exception cref="Exceptions.AlreadyExistException"></exception>
-        public static Employee CreateManager(this DbSet<Employee> source, Employee manger)
-        {
-            if (source.Find(Employee.ManagerId) == null)
-            {  
-                //----------- Repeated -----------//
-                // First Remove Person as Employee
-                source.Remove(manger);
-                // Second Add Person as Manger
-                source.Add(new(manger)
-                {
-                    Id = Employee.ManagerId
-                });
-
-                return manger;
-            }
-            throw Exceptions.AlreadyExistException("Manager");
-        }
-
-        /// <summary>
-        /// Change Manger with other Employee
-        /// </summary>
-        /// <param name="source"><see cref="DbSet{Employee}"/></param>
-        /// <param name="employee">Employee that will be a Manager</param>
-        /// <param name="removeMan">Remove a Manger from System or Make it as Employee</param>
-        public static void ChangeManager(this DbSet<Employee> source,
-            Employee employee, bool removeMan = false)
-        {
-            // Get the Manger 
-            Employee? oldManger = source.Find(Employee.ManagerId);
-
-            if (oldManger != null) // The Manger is existed
-            {
-                // Remove Manager From System
-                source.Remove(oldManger);
-
-                if (!removeMan)
-                {
-                    // Add Manager as new Employee with new ID
-                    Employee newEmployee = new(oldManger);
-                    source.Add(newEmployee); // Add him as Employee
-                }
-
-                //----------- Repeated -----------//
-                // First Remove Person as Employee
-                source.Remove(employee);
-                // Second Add Person as Manger
-                source.Add(new(employee)
-                {
-                    Id = Employee.ManagerId
-                });
-            }
-            else throw Exceptions.NotFoundException("Manger");
-        }
-
-        #endregion
     }
 }

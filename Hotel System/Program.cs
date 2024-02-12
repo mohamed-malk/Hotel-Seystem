@@ -1,4 +1,5 @@
 using Hotel_System.Models;
+using Hotel_System.Services;
 
 namespace Hotel_System
 {
@@ -10,6 +11,7 @@ namespace Hotel_System
         [STAThread]
         static void Main()
         {
+            EmployeeRepo employeeRepo = new EmployeeRepo();
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
@@ -21,7 +23,7 @@ namespace Hotel_System
             //dbContext.SaveChanges();
 
             MessageBox.Show(
-                dbContext.People.Login("mohMalk", "Mohamed23Malk26").ToString()
+                employeeRepo.Login("mohMalk", "Mohamed23Malk26").ToString()
             );
             //MessageBox.Show(dbContext.Employees.Find(5)!.Name);
             //dbContext.Clients.Filter(e => e.Age == 50);

@@ -8,5 +8,7 @@
 
         public static Exception AlreadyExistException(string entityName)
             => new($"This {entityName} is already exist in DataBase");
+        public static Exception NotFoundProperty(string propertyName)
+            => new ArgumentException($"This {propertyName} is not found in the object");
     }
 }
