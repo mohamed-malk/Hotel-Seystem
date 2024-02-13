@@ -89,6 +89,52 @@ namespace Hotel_System.Services
             _dbContext.Reservations.Remove(reservation);
             _dbContext.SaveChanges();
         }
+
+        public List<string> GetRoomList()
+        {
+            List<string> roomList = new List<string>();
+
+            roomList = _dbContext.Rooms.Select(room =>
+                                        $"{room.Id} " +
+                                        $"{room.Number} " +
+                                        $"{room.Rate} " +
+                                        $"{room.Type} " +
+                                        $"{room.IsAvailable}").ToList();
+
+            return roomList;
+        }
+        public List<string> GetReservationList()
+        {
+            List<string> reservationList = new List<string>();
+
+
+            reservationList = _dbContext.Reservations.Select(reservation =>
+                                        $"{reservation.ReservationDate}" +
+                                          $"{reservation.CheckInDate}" +
+                                          $"{reservation.CheckOutDate}" +
+                                          $"{reservation.DurationDays}" +
+                                          $"{reservation.ClientId}" +
+                                          $"{reservation.RoomId}" +
+                                          $"{reservation.PaymentId}").ToList();
+
+            return reservationList;
+        }
+        public List<string> GetPaymentList()
+        {
+            List<string> paymentList = new List<string>();
+
+            paymentList = _dbContext.Payments.Select(payment =>
+                                     $"{payment.Id}" +
+                                     $"{payment.Date}" +
+                                     $"{payment.Amount}" +
+                                     $"{payment.TargetAmount}" +
+                                     $"{payment.Rest}" +
+                                     $"{payment.ClientId}").ToList();
+            return paymentList;
+        }
+
+
+
     }
 
 }

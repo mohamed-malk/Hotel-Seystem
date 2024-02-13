@@ -48,6 +48,23 @@ namespace Hotel_System.Services
             _dbContext.SaveChanges();
             return feedback;
         }
+
+        public List<string> GetFeedbackList()
+        {
+            List<string> feedbackList = new List<string>();
+
+            feedbackList = _dbContext.FeedBacks.Select(feedback =>
+                                    $"{feedback.Id} " +
+                                    $"{feedback.Rate} " +
+                                    $"{feedback.FoodQuality} " +
+                                    $"{feedback.Description} " +
+                                    $"{feedback.Date} " +
+                                    $"{feedback.ClientId}").ToList();
+
+            return feedbackList;
+        }
+
+
     }
 
 }
