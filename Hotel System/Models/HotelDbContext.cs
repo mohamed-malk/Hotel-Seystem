@@ -15,7 +15,7 @@ namespace Hotel_System.Models
         public virtual DbSet<FeedBack> FeedBacks { get; set; } = null!;
         public virtual DbSet<Payment> Payments { get; set; } = null!;
         
-        public static DbSet<CommonTable> CommonTable { get; set; } = null!;
+        public virtual DbSet<CommonTable> CommonTable { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

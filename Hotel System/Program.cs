@@ -1,4 +1,3 @@
-using Hotel_System.Models;
 using Hotel_System.Services;
 
 namespace Hotel_System
@@ -17,21 +16,14 @@ namespace Hotel_System
             ApplicationConfiguration.Initialize();
             Application.Run(new DashBoard());
 
-            HotelDbContext dbContext = new();
+            RoomRepo repo = new RoomRepo();
 
-            //dbContext.Employees.ChangeManager(dbContext.Employees.Find(6)!);
-            //dbContext.SaveChanges();
-
-            MessageBox.Show(
-                employeeRepo.Login("mohMalk", "Mohamed23Malk26").ToString()
-            );
-            //MessageBox.Show(dbContext.Employees.Find(5)!.Name);
-            //dbContext.Clients.Filter(e => e.Age == 50);
-
-            //dbContext.Employees.Add(new Employee
-            //{
-            //    Address = "Cairo"
-            //})
+            repo.ReserveRoom(7, 3, 500,
+                DateTime.Today.Add(
+                    new TimeSpan(1, 0, 0, 0)), 
+                DateTime.Today.Add(
+                new TimeSpan(10, 0, 0, 0)
+                ));
         }
     }
 }

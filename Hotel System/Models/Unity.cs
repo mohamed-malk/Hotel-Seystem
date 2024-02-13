@@ -11,7 +11,7 @@ namespace Hotel_System.Models
 
         Nationality, Points, MemberShipId
     }
-static class Unity
+    static class Unity
     {
         public static string ConnectionString =>
             ConfigurationManager.ConnectionStrings["LocalMoh"].ConnectionString;

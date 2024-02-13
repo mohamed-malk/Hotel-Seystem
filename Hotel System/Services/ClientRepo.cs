@@ -5,20 +5,29 @@ namespace Hotel_System.Services
 {
     internal class ClientRepo : PersonRepo
     {
-        private readonly HotelDbContext _dbContext = new HotelDbContext();
-        
+
+        private readonly HotelDbContext _dbContext = new();
+
+        public void Add(Client client)
+        {
+            _dbContext.Clients.Add(client);
+            _dbContext.SaveChanges();
+        }
+
         public override void Delete(int id)
         {
             Client? client = GetById(id);
-            if (client != null)
-                Delete(client);
+            
+            if (client != null) Delete(client);
+            else throw Exceptions.NotFoundException("Client");
         }
         public override void Delete(string nId)
         {
             Client? client = _dbContext.Clients
                 .SingleOrDefault(c => c.NId == nId);
-            if (client != null)
-                Delete(client);
+            
+            if (client != null) Delete(client);
+            else throw Exceptions.NotFoundException("Client");
         }
         public void Delete(Client client)
         {

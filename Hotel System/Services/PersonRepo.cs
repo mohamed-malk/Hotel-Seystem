@@ -9,11 +9,16 @@ namespace Hotel_System.Services
         /// <summary>
         /// Login to System
         /// </summary>
-        /// <returns>Login Successfully or Not </returns>
-        public bool Login(string userName, string password) 
+        /// <returns>Login Successfully Person or Null </returns>
+        public Person? Login(string userName, string password) 
             => _dbContext.People.SingleOrDefault(p =>
-            p.UserName == userName && p.Password == password) != null;
+            p.UserName == userName && p.Password == password);
         
+        public virtual void Add(Person person)
+        {
+            _dbContext.People.Add(person);
+            _dbContext.SaveChanges();
+        }
         public abstract void Delete(int id);
         public abstract void Delete(string nId);
 

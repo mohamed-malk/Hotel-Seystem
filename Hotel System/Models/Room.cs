@@ -1,5 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Hotel_System.Models
 {
@@ -20,14 +19,14 @@ namespace Hotel_System.Models
 
         [NotMapped] // Not Convert to SQL Table
         public float Price =>
-            float.Parse(HotelDbContext.GetValue(Unity.RoomPrice)) * (int)Type;
+            float.Parse(
+                new HotelDbContext().CommonTable.Find(Unity.RoomPrice)!.Value
+                ) * (int)Type;
 
         #endregion
 
         // Reduce Join
         public virtual ICollection<Reservation>? Reservations { get; set; }
             = new HashSet<Reservation>();
-
-
     }
 }

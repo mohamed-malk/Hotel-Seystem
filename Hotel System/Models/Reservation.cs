@@ -1,4 +1,6 @@
-﻿namespace Hotel_System.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Hotel_System.Models
 {
     public class Reservation
     {
@@ -7,7 +9,9 @@
         public DateTime ReservationDate { get; set; }
         public DateTime CheckInDate { get; set; }
         public DateTime CheckOutDate { get; set; }
-       
+
+        [NotMapped]
+        public int DurationDays => (CheckOutDate - CheckInDate).Days;
         #endregion
 
         #region Relation Mapping

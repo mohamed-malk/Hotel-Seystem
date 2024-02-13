@@ -17,6 +17,9 @@
         public virtual ICollection<Reservation>? Reservation { get; set; }
             = new HashSet<Reservation>();
 
+        public virtual ICollection<Payment>? Payments { get; set; }
+            = new HashSet<Payment>();
+
 
         public override string ObjectName { get; } = "Client";
     }

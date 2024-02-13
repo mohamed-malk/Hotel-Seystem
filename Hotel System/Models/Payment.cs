@@ -11,5 +11,8 @@ namespace Hotel_System.Models
         
         [NotMapped]
         public float Rest => TargetAmount - Amount;
+
+        public int? ClientId { get; set; }
+        public virtual Client? Client { get; set; }
     }
 }

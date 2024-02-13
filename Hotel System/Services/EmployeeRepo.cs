@@ -104,6 +104,11 @@ namespace Hotel_System.Services
         #endregion
 
         #region Employee
+        public void Add(Employee employee)
+        {
+            _dbContext.Employees.Add(employee);
+            _dbContext.SaveChanges();
+        }
 
         public override void Delete(int id)
         {
