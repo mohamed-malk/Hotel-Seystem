@@ -34,7 +34,8 @@ namespace Hotel_System.Services
             _dbContext.FeedBacks.Remove(feedback);
             _dbContext.SaveChanges();
         }
-        public FeedBack Edit(int feedbackId, string newFeedbackText, int newRating, int foodQuality)
+        public FeedBack Edit(int feedbackId, string newFeedbackText,
+            int newRating, int foodQuality)
         {
             var feedback = _dbContext.FeedBacks.Find(feedbackId);
             if (feedback == null)
@@ -50,19 +51,13 @@ namespace Hotel_System.Services
         }
 
         public List<string> GetFeedbackList()
-        {
-            List<string> feedbackList = new List<string>();
-
-            feedbackList = _dbContext.FeedBacks.Select(feedback =>
-                                    $"{feedback.Id} " +
-                                    $"{feedback.Rate} " +
-                                    $"{feedback.FoodQuality} " +
-                                    $"{feedback.Description} " +
-                                    $"{feedback.Date} " +
-                                    $"{feedback.ClientId}").ToList();
-
-            return feedbackList;
-        }
+            => _dbContext.FeedBacks.Select(feedback =>
+                $"{feedback.Id} " +
+                $"{feedback.Rate} " +
+                $"{feedback.FoodQuality} " +
+                $"{feedback.Description} " +
+                $"{feedback.Date} " +
+                $"{feedback.ClientId}").ToList();
 
 
     }

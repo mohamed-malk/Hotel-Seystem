@@ -1,5 +1,4 @@
 ﻿using Hotel_System.Models;
-using Microsoft.EntityFrameworkCore;
 
 namespace Hotel_System.Services
 {
