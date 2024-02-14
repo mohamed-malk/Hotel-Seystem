@@ -56,9 +56,9 @@ namespace Hotel_System_Back.Models
             // Constraints
             builder.ToTable(b => b
                 .HasCheckConstraint("EmailValidation",
-                    "[Email] like '%[a-zA-z0-9.]@__%.__%' and [Email] not like '%[-+/*]%'"));
+                    "[Email] like '%[a-zA-Z0-9.]@__%.__%' and [Email] not like '%[-+/*]%'"));
             builder.ToTable(b => b
-                .HasCheckConstraint("NidValidation", "len([NId]) = 14"));
+                .HasCheckConstraint("NidValidation", "len([NId]) = 14 and [NId] not like '%[a-zA-Z.+/*_]%'"));
         }
     }
 }
