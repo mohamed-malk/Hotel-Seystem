@@ -3,9 +3,9 @@
     [Flags]
     public enum Advantages : byte
     {
-        FreeStay = 0001,
-        FreeUpgrade = 0010,
-        Additional = 0100
+        FreeStay = 0b0001,
+        FreeUpgrade = 0b0010,
+        Additional = 0b0100
     }
     public class MemberShip
     {

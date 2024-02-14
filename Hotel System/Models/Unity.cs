@@ -19,6 +19,7 @@ namespace Hotel_System.Models
         //#region Important String used in Table Configurations
 
         public static string RoomPrice => "RoomPrice";
+        public static string UpgradePercentage => "10";
 
 
         public static int I { set; get; } = 0;

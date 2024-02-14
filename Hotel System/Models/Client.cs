@@ -8,8 +8,8 @@
         public int Points { get; set; }
         
         // Mapping RelationShip
-        public int? MemberShipId { get; set; }
-        public virtual MemberShip? MemberShip { get; set; }
+        public int? MemberShipId { get; set ; }
+        public virtual MemberShip? MemberShip { get; private set; } 
 
         // Reduce Join Query
         public virtual ICollection<FeedBack>? FeedBacks { get; set; }
@@ -19,7 +19,6 @@
 
         public virtual ICollection<Payment>? Payments { get; set; }
             = new HashSet<Payment>();
-
 
         public override string ObjectName { get; } = "Client";
     }

@@ -2,7 +2,7 @@
 
 namespace Hotel_System.Services
 {
-    internal abstract class PersonRepo
+    public abstract class PersonRepo
     {
         private readonly HotelDbContext _dbContext = new();
         

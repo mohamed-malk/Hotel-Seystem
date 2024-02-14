@@ -1,0 +1,43 @@
+Client Functions from ClientRepo
+    Add ==> client
+    Delete ==> id  
+    Delete ==> nId 
+    Delete ==> client 
+    GetAll <==  List<Client>
+    GetById ==> id <== Client
+    GetByName ==> name <==  List<Client>
+    GetByNamePattern ==> name <==  List<Client>
+    GetByAddress ==> address <==  List<Client>
+    Update ==> client 
+    Update ==> id, newValues <== Client
+
+Employee Functions from EmployeeRepo
+    Add ==> employee
+    Delete ==> id  
+    Delete ==> nId 
+    Delete ==> employee 
+    GetAll <==  List<Employee>
+    GetById ==> id <== Employee
+    GetByName ==> name <==  List<Employee>
+    GetByNamePattern ==> name <==  List<Employee>
+    GetByAddress ==> address <==  List<Employee>
+    Update ==> employee 
+    Update ==> id, newValues <== Employee
+
+    CreateManager ==> userName, email, ..... <== Employee
+    CreateManager ==> manger <== Employee
+    ChangeManager ==> employee, removeMan
+
+Reservation Functions from ReservationRepo
+    ReserveRoom ==>  clientId, roomId, amount, startDate, endDate <== bool
+    CancelReservation ==> clintId, roomId, date  
+    GetReservationList <== List<Reservation> 
+    GetPaymentList <== List<Reservation> 
+
+Room Functions from RoomRepo
+    Add ==>  room
+    GetRoomList <== List<Rooms> 
+
+Feedback Functions from FeedbackRepo
+    Add ==>  clientId, feedbackText, rating, foodQuality <== FeedBack 
+    GetFeedbackList <== List<FeedBack> 
