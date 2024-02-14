@@ -21,7 +21,10 @@ namespace Hotel_System_Back.Models
                    || entity.GetType() == typeof(DbSet<Reservation>)
                    || entity.GetType() == typeof(DbSet<Payment>)
                    || entity.GetType() == typeof(DbSet<FeedBack>)
-                   || entity.GetType() == typeof(DbSet<MemberShip>);
+                   || entity.GetType() == typeof(DbSet<MemberShip>)
+                   || entity.GetType() == typeof(DbSet<CommonTable>)
+                   || entity.GetType() == typeof(DbSet<TransactionTable>)
+                   || entity.GetType() == typeof(DbSet<CommonTable>);
         }
 
         /// <summary>

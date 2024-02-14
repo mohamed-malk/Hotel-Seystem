@@ -22,7 +22,7 @@ internal static class Unity
     //#region Important String used in Table Configurations
 
     public static string RoomPrice => "RoomPrice";
-    public static string UpgradePercentage => "10";
+    public static string UpgradePercentage => "UpgradePercentage";
 
     public static int MangerId => 1;
     //#endregion
