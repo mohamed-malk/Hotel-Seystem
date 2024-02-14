@@ -14,4 +14,6 @@ public class RoomRepo
     }
 
     public List<Room> GetRoomList() => _dbContext.Rooms.ToList();
+    public List<Room> GetAvailableRooms() => _dbContext.Rooms
+        .Filter(r => r.IsAvailable == true).ToList();
 }
