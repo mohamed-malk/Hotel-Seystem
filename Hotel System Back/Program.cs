@@ -5,13 +5,8 @@ namespace Hotel_System_Back
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>
-        //[STAThread]
         static void Main()
         {
-            InformationRepo information = new InformationRepo();
-
-            var x = information.ClientsCategory();
-            
         }
     }
 }
