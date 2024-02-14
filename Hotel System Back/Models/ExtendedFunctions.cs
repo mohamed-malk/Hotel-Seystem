@@ -14,17 +14,16 @@ namespace Hotel_System_Back.Models
         /// <returns>The Entity is belonged to DbContext or not </returns>
         private static bool CheckType<TEntity>(DbSet<TEntity> entity) where TEntity : class
         {
-            return entity.GetType() == typeof(DbSet<Person>)
-                   || entity.GetType() == typeof(DbSet<Employee>)
-                   || entity.GetType() == typeof(DbSet<Client>)
-                   || entity.GetType() == typeof(DbSet<Room>)
-                   || entity.GetType() == typeof(DbSet<Reservation>)
-                   || entity.GetType() == typeof(DbSet<Payment>)
-                   || entity.GetType() == typeof(DbSet<FeedBack>)
-                   || entity.GetType() == typeof(DbSet<MemberShip>)
-                   || entity.GetType() == typeof(DbSet<CommonTable>)
-                   || entity.GetType() == typeof(DbSet<TransactionTable>)
-                   || entity.GetType() == typeof(DbSet<CommonTable>);
+            return entity is DbSet<Person>
+                   || entity is DbSet<Employee>
+                   || entity is DbSet<Client>
+                   || entity is DbSet<Room>
+                   || entity is DbSet<Reservation>
+                   || entity is DbSet<Payment>
+                   || entity is DbSet<FeedBack>
+                   || entity is DbSet<MemberShip>
+                   || entity is DbSet<CommonTable>
+                   || entity is DbSet<TransactionTable>;
         }
 
         /// <summary>

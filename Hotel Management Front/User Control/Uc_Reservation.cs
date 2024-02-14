@@ -13,7 +13,7 @@ namespace Hotel_System_Front.User_Control
     public partial class Uc_Reservation : UserControl
     {
         ReservationRepo reserve = new ReservationRepo();
-        RoomRepo    RoomReserve = new RoomRepo(); 
+        RoomRepo RoomReserve = new RoomRepo(); 
         ClientRepo ClientRepo = new ClientRepo();
         public Uc_Reservation()
         {
@@ -50,8 +50,6 @@ namespace Hotel_System_Front.User_Control
             {
                 comboBox2.Items.Add(client.Id);
             }
-            
-            
         }
     }
 }
