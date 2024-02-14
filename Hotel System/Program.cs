@@ -16,7 +16,7 @@ namespace Hotel_System
             ApplicationConfiguration.Initialize();
             Application.Run(new DashBoard());
 
-            RoomRepo repo = new RoomRepo();
+            ReservationRepo repo = new ReservationRepo();
 
             repo.ReserveRoom(7, 3, 500,
                 DateTime.Today.Add(

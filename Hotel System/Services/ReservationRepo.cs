@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Hotel_System.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Hotel_System.Services;
 public class ReservationRepo

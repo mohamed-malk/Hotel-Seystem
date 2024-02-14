@@ -1,4 +1,6 @@
-﻿namespace Hotel_System.Services
+﻿using Hotel_System.Models;
+
+namespace Hotel_System.Services
 {
     public abstract class PersonRepo
     {
