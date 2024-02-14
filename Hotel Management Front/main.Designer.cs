@@ -37,34 +37,31 @@
             pictureBox7 = new PictureBox();
             pictureBox6 = new PictureBox();
             pictureBox5 = new PictureBox();
-            pictureBox4 = new PictureBox();
             pictureBox9 = new PictureBox();
-            pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
             panelContainer = new Panel();
-            button1 = new Button();
             button2 = new Button();
             button3 = new Button();
             button4 = new Button();
             button5 = new Button();
-            button6 = new Button();
             button7 = new Button();
+            pictureBox4 = new PictureBox();
+            button6 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             SuspendLayout();
             // 
             // pictureBox3
             // 
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(7, 473);
+            pictureBox3.Location = new Point(7, 415);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(60, 50);
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -126,7 +123,7 @@
             // pictureBox6
             // 
             pictureBox6.Image = Properties.Resources.room;
-            pictureBox6.Location = new Point(14, 181);
+            pictureBox6.Location = new Point(14, 123);
             pictureBox6.Name = "pictureBox6";
             pictureBox6.Size = new Size(46, 51);
             pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -136,47 +133,27 @@
             // pictureBox5
             // 
             pictureBox5.Image = Properties.Resources.booking;
-            pictureBox5.Location = new Point(11, 356);
+            pictureBox5.Location = new Point(11, 298);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(50, 50);
             pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox5.TabIndex = 46;
             pictureBox5.TabStop = false;
             // 
-            // pictureBox4
-            // 
-            pictureBox4.Image = Properties.Resources.report;
-            pictureBox4.Location = new Point(13, 416);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(52, 47);
-            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox4.TabIndex = 45;
-            pictureBox4.TabStop = false;
-            // 
             // pictureBox9
             // 
             pictureBox9.Image = Properties.Resources.customers;
-            pictureBox9.Location = new Point(11, 242);
+            pictureBox9.Location = new Point(11, 184);
             pictureBox9.Name = "pictureBox9";
             pictureBox9.Size = new Size(51, 47);
             pictureBox9.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox9.TabIndex = 52;
             pictureBox9.TabStop = false;
             // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = Properties.Resources._3502688;
-            pictureBox1.Location = new Point(14, 123);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(46, 45);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 43;
-            pictureBox1.TabStop = false;
-            // 
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources.users5;
-            pictureBox2.Location = new Point(13, 301);
+            pictureBox2.Location = new Point(13, 243);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(46, 46);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -191,23 +168,6 @@
             panelContainer.Size = new Size(1096, 638);
             panelContainer.TabIndex = 36;
             // 
-            // button1
-            // 
-            button1.BackColor = Color.White;
-            button1.FlatAppearance.BorderColor = Color.White;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(103, 177, 198);
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI", 20.25F);
-            button1.Location = new Point(66, 121);
-            button1.Name = "button1";
-            button1.Size = new Size(171, 60);
-            button1.TabIndex = 53;
-            button1.Text = "Categories";
-            button1.TextAlign = ContentAlignment.MiddleLeft;
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
-            // 
             // button2
             // 
             button2.BackColor = Color.White;
@@ -215,7 +175,7 @@
             button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(103, 177, 198);
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Segoe UI", 20.25F);
-            button2.Location = new Point(66, 179);
+            button2.Location = new Point(66, 121);
             button2.Name = "button2";
             button2.Size = new Size(171, 60);
             button2.TabIndex = 54;
@@ -231,7 +191,7 @@
             button3.FlatAppearance.MouseOverBackColor = Color.FromArgb(103, 177, 198);
             button3.FlatStyle = FlatStyle.Flat;
             button3.Font = new Font("Segoe UI", 20.25F);
-            button3.Location = new Point(66, 237);
+            button3.Location = new Point(66, 179);
             button3.Name = "button3";
             button3.Size = new Size(171, 60);
             button3.TabIndex = 55;
@@ -247,7 +207,7 @@
             button4.FlatAppearance.MouseOverBackColor = Color.FromArgb(103, 177, 198);
             button4.FlatStyle = FlatStyle.Flat;
             button4.Font = new Font("Segoe UI", 20.25F);
-            button4.Location = new Point(66, 295);
+            button4.Location = new Point(66, 237);
             button4.Name = "button4";
             button4.Size = new Size(171, 60);
             button4.TabIndex = 56;
@@ -263,7 +223,7 @@
             button5.FlatAppearance.MouseOverBackColor = Color.FromArgb(103, 177, 198);
             button5.FlatStyle = FlatStyle.Flat;
             button5.Font = new Font("Segoe UI", 20.25F);
-            button5.Location = new Point(66, 354);
+            button5.Location = new Point(66, 296);
             button5.Name = "button5";
             button5.Size = new Size(171, 60);
             button5.TabIndex = 57;
@@ -272,22 +232,6 @@
             button5.UseVisualStyleBackColor = false;
             button5.Click += button5_Click;
             // 
-            // button6
-            // 
-            button6.BackColor = Color.White;
-            button6.FlatAppearance.BorderColor = Color.White;
-            button6.FlatAppearance.MouseOverBackColor = Color.FromArgb(103, 177, 198);
-            button6.FlatStyle = FlatStyle.Flat;
-            button6.Font = new Font("Segoe UI", 20.25F);
-            button6.Location = new Point(66, 412);
-            button6.Name = "button6";
-            button6.Size = new Size(171, 60);
-            button6.TabIndex = 58;
-            button6.Text = "FeedBack";
-            button6.TextAlign = ContentAlignment.MiddleLeft;
-            button6.UseVisualStyleBackColor = false;
-            button6.Click += button6_Click;
-            // 
             // button7
             // 
             button7.BackColor = Color.White;
@@ -295,7 +239,7 @@
             button7.FlatAppearance.MouseOverBackColor = Color.FromArgb(103, 177, 198);
             button7.FlatStyle = FlatStyle.Flat;
             button7.Font = new Font("Segoe UI", 20.25F);
-            button7.Location = new Point(66, 470);
+            button7.Location = new Point(66, 412);
             button7.Name = "button7";
             button7.Size = new Size(171, 60);
             button7.TabIndex = 59;
@@ -304,13 +248,38 @@
             button7.UseVisualStyleBackColor = false;
             button7.Click += button7_Click;
             // 
+            // pictureBox4
+            // 
+            pictureBox4.Image = Properties.Resources.report;
+            pictureBox4.Location = new Point(13, 358);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(52, 47);
+            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox4.TabIndex = 45;
+            pictureBox4.TabStop = false;
+            // 
+            // button6
+            // 
+            button6.BackColor = Color.White;
+            button6.FlatAppearance.BorderColor = Color.White;
+            button6.FlatAppearance.MouseOverBackColor = Color.FromArgb(103, 177, 198);
+            button6.FlatStyle = FlatStyle.Flat;
+            button6.Font = new Font("Segoe UI", 20.25F);
+            button6.Location = new Point(66, 354);
+            button6.Name = "button6";
+            button6.Size = new Size(171, 60);
+            button6.TabIndex = 58;
+            button6.Text = "FeedBack";
+            button6.TextAlign = ContentAlignment.MiddleLeft;
+            button6.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click;
+            // 
             // main
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1091, 701);
-            Controls.Add(button1);
             Controls.Add(button7);
             Controls.Add(button2);
             Controls.Add(pictureBox3);
@@ -325,7 +294,6 @@
             Controls.Add(pictureBox5);
             Controls.Add(pictureBox4);
             Controls.Add(pictureBox9);
-            Controls.Add(pictureBox1);
             Controls.Add(pictureBox2);
             Controls.Add(panelContainer);
             Name = "main";
@@ -338,10 +306,9 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -355,17 +322,15 @@
         private PictureBox pictureBox7;
         private PictureBox pictureBox6;
         private PictureBox pictureBox5;
-        private PictureBox pictureBox4;
         private PictureBox pictureBox9;
-        private PictureBox pictureBox1;
         private PictureBox pictureBox2;
         private Panel panelContainer;
         private Button button7;
-        private Button button1;
         private Button button2;
         private Button button3;
         private Button button4;
         private Button button5;
+        private PictureBox pictureBox4;
         private Button button6;
     }
 }
