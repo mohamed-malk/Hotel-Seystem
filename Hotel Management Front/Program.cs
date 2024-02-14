@@ -1,3 +1,6 @@
+using Hotel_System_Back.Models;
+using Microsoft.EntityFrameworkCore;
+
 namespace Hotel_System_Front
 {
     internal static class Program
