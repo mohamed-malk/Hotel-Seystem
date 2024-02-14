@@ -127,7 +127,7 @@ public class EmployeeRepo : PersonRepo
             _dbContext.Employees.Remove(employee);
             _dbContext.SaveChanges();
         }
-        else throw new Exception("Can't Delete Manger");
+        else throw new Exception("Can't Delete Employee");
     }
 
     public List<Employee> GetAll() => _dbContext.Employees.ToList();

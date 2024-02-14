@@ -15,6 +15,29 @@ public class ClientRepo : PersonRepo
     }
 
     /// <summary>
+    /// For Registration
+    /// </summary>
+    public Client Add(string userName, string email, 
+        string password, string nId)
+    {
+        Client client = new()
+        {
+            UserName = userName,
+            Email = email,
+            Password = password,
+            Address = "",
+            Name = "",
+            NId = nId,
+            Nationality = ""
+        };
+
+        _dbContext.Clients.Add(client);
+        _dbContext.SaveChanges();
+
+        return client;
+    }
+
+    /// <summary>
     /// Delete Client By Id
     /// </summary>
     /// <param name="id">Client Id</param>

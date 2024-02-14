@@ -2,10 +2,6 @@
 {
     public partial class Client
     {
-        private Client()
-        {
-
-        }
 
         /// <summary>
         /// Update Points with new Value and Update the MemberShip

@@ -24,6 +24,6 @@ namespace Hotel_System.Models
 
         #endregion
 
-        public abstract string ObjectName { get; }
+        public abstract UserType ObjectName { get; }
     }
 }

@@ -1,28 +1,29 @@
 ﻿using System.Configuration;
+namespace Hotel_System.Models;
 
-namespace Hotel_System.Models
+public enum UserType
 {
-    public enum Properties
-    {
-        Id ,UserName , Email , Password ,
-        NId, Name ,Age , Gender , Address,
+    Client, Employee
+}
+public enum Properties
+{
+    Id ,UserName , Email , Password ,
+    NId, Name ,Age , Gender , Address,
 
-        Salary, Attend,
+    Salary, Attend,
 
-        Nationality, Points, MemberShipId
-    }
-    static class Unity
-    {
-        public static string ConnectionString =>
-            ConfigurationManager.ConnectionStrings["LocalMoh"].ConnectionString;
+    Nationality, Points, MemberShipId
+}
+internal static class Unity
+{
+    public static string ConnectionString =>
+        ConfigurationManager.ConnectionStrings["LocalMoh"].ConnectionString;
 
-        //#region Important String used in Table Configurations
+    //#region Important String used in Table Configurations
 
-        public static string RoomPrice => "RoomPrice";
-        public static string UpgradePercentage => "10";
+    public static string RoomPrice => "RoomPrice";
+    public static string UpgradePercentage => "10";
 
-
-        public static int I { set; get; } = 0;
-        //#endregion
-    }
+    public static int MangerId { get; } = 1;
+    //#endregion
 }

@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace Hotel_System.Models
+﻿namespace Hotel_System.Models
 {
     public class FeedBack
     {

@@ -2,10 +2,10 @@
 {
     public partial class Employee : Person
     {
-        public static int ManagerId => 1;
+        public static int ManagerId => Unity.MangerId;
         public int Attend { get; set; }
         public float Salary { get; set; }
 
-        public override string ObjectName { get; } = "Employee";
+        public override UserType ObjectName { get; } = UserType.Employee;
     }
 }
