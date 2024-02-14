@@ -1,7 +1,4 @@
-﻿using Hotel_System_Back.Config;
-using Microsoft.EntityFrameworkCore;
-
-namespace Hotel_System_Back.Models
+﻿namespace Hotel_System_Back.Models
 {
     public partial class HotelDbContext : DbContext
     {
@@ -27,7 +24,7 @@ namespace Hotel_System_Back.Models
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.ApplyConfigurationsFromAssembly(typeof(ReservationConfig).Assembly);
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(ClientConfig).Assembly);
         }
 
     }

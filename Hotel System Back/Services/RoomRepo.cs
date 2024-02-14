@@ -1,6 +1,4 @@
-﻿using Hotel_System_Back.Models;
-
-namespace Hotel_System_Back.Services;
+﻿namespace Hotel_System_Back.Services;
 public class RoomRepo
 {
     private readonly HotelDbContext _dbContext = new();

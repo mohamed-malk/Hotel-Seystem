@@ -17,13 +17,13 @@ public enum Properties
 internal static class Unity
 {
     public static string ConnectionString =>
-        ConfigurationManager.ConnectionStrings["LocalMoh"].ConnectionString;
+        ConfigurationManager.ConnectionStrings["OnLine"].ConnectionString;
 
     //#region Important String used in Table Configurations
 
     public static string RoomPrice => "RoomPrice";
     public static string UpgradePercentage => "10";
 
-    public static int MangerId { get; } = 1;
+    public static int MangerId => 1;
     //#endregion
 }

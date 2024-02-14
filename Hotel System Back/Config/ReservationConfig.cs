@@ -1,5 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using Hotel_System_Back.Models;
 
 namespace Hotel_System_Back.Config
@@ -18,7 +23,7 @@ namespace Hotel_System_Back.Config
             
             // Other Constraints
             builder.ToTable(b =>
-                b.HasCheckConstraint("CheckInValidation", "[CheckInDate] >= GetDate()"));
+                b.HasCheckConstraint("CheckInValidation", "[CheckInDate] > GetDate()"));
             builder.ToTable(b =>
                 b.HasCheckConstraint("CheckOutValidation", "[CheckOutDate] > [CheckInDate]"));
         }
