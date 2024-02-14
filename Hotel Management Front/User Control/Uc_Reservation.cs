@@ -31,7 +31,7 @@ namespace Hotel_System_Front.User_Control
             DateTime startDate = dateTimePicker1.Value;
             DateTime endDate = dateTimePicker2.Value;
 
-
+            
             reserve.ReserveRoom(clientid, roomid, amount, startDate, endDate);
 
             MessageBox.Show(clientid.ToString());
