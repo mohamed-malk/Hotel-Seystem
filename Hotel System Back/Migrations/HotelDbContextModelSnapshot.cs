@@ -355,7 +355,7 @@ namespace Hotel_System_Back.Migrations
                     b.HasOne("Hotel_System_Back.Models.Client", "Client")
                         .WithMany("Payments")
                         .HasForeignKey("ClientId")
-                        .OnDelete(DeleteBehavior.SetNull);
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.Navigation("Client");
                 });

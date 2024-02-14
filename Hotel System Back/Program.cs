@@ -8,6 +8,10 @@ namespace Hotel_System_Back
         //[STAThread]
         static void Main()
         {
+            InformationRepo information = new InformationRepo();
+
+            var x = information.ClientsCategory();
+            
         }
     }
 }

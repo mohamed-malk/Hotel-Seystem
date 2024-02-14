@@ -13,6 +13,7 @@
         public virtual DbSet<Payment> Payments { get; set; } = null!;
         
         public virtual DbSet<CommonTable> CommonTable { get; set; } = null!;
+        public virtual DbSet<TransactionTable> TransactionTable { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

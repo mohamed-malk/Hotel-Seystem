@@ -17,7 +17,7 @@ public enum Properties
 internal static class Unity
 {
     public static string ConnectionString =>
-        ConfigurationManager.ConnectionStrings["OnLine"].ConnectionString;
+        ConfigurationManager.ConnectionStrings["LocalMoh"].ConnectionString;
 
     //#region Important String used in Table Configurations
 

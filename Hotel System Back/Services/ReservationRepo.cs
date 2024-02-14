@@ -5,7 +5,15 @@ namespace Hotel_System_Back.Services;
 public class ReservationRepo
 {
     private readonly HotelDbContext _dbContext = new();
-    
+
+    private TransactionTable CreateTransaction(int roomNumber,
+        bool isComplete, float paid, float rest) =>
+        new()
+        {
+            IsCompleted = isComplete, Paid = paid,
+            RoomNumber = roomNumber, Rest = rest
+        };
+
     public bool ReserveRoom(int clientId, int roomId,
        float amount, DateTime startDate, DateTime endDate)
     {
@@ -61,7 +69,12 @@ public class ReservationRepo
         room.IsAvailable = false;
         client.UpdatePoints(client.Points + 1); // Add point for user  
 
+        
         // Update in Db sets and DB 
+
+        _dbContext.TransactionTable.Add(  // Add the Reservation To the Transaction
+            CreateTransaction(room.Number, false, payment.Amount, payment.Rest));
+        
         _dbContext.Reservations.Add(reservation);
         _dbContext.Clients.Update(client);
         _dbContext.Rooms.Update(room);
@@ -91,6 +104,10 @@ public class ReservationRepo
         if (room != null)
             room.IsAvailable = true; // Mark the room as not occupied
         else throw new Exception("Room Doesn't Exist, Something Wrong");
+
+        _dbContext.TransactionTable.Add( // Add the To the Transaction
+            CreateTransaction(room.Number, true,
+                reservation.Payment.Amount, reservation.Payment.Rest));
 
         _dbContext.Rooms.Update(room);
         _dbContext.Reservations.Remove(reservation);
