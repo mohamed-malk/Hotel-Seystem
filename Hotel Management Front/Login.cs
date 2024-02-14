@@ -1,9 +1,3 @@
-using Hotel_System.Models;
-using Hotel_System.Services;
-using System.Drawing.Drawing2D;
-
-using Hotel_System.Services;
-
 namespace Hotel_System_Front
 {
     public partial class Login : Form

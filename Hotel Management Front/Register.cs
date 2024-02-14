@@ -6,10 +6,6 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Hotel_System.Models;
-using Hotel_System.Services;
 
 namespace Hotel_System_Front
 {
