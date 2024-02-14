@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             textBox5 = new TextBox();
             comboBox2 = new ComboBox();
             comboBox1 = new ComboBox();
@@ -153,8 +153,8 @@
             // 
             // RoomId
             // 
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(103, 177, 198);
-            RoomId.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(103, 177, 198);
+            RoomId.DefaultCellStyle = dataGridViewCellStyle1;
             RoomId.HeaderText = "Id";
             RoomId.Name = "RoomId";
             RoomId.ReadOnly = true;
@@ -225,6 +225,7 @@
             button1.TabIndex = 84;
             button1.Text = "Add";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // dataGridView1
             // 

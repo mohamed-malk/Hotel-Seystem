@@ -21,5 +21,10 @@ namespace Hotel_System_Front.User_Control
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

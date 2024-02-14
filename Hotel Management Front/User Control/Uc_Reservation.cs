@@ -39,7 +39,7 @@ namespace Hotel_System_Front.User_Control
 
         private void Uc_Reservation_Load(object sender, EventArgs e)
         {
-            var rooms = RoomReserve.GetAvailableRooms();
+            var rooms = RoomReserve.GetRoomList();
             foreach(Room room in rooms)
             {
                 comboBox1.Items.Add(room.Id);
