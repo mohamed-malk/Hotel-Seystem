@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             textBox3 = new TextBox();
             textBox2 = new TextBox();
             button4 = new Button();
@@ -41,16 +40,11 @@
             textBox6 = new TextBox();
             comboBox1 = new ComboBox();
             comboBox2 = new ComboBox();
-            RoomId = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            name = new DataGridViewTextBoxColumn();
-            Email = new DataGridViewTextBoxColumn();
-            Phone = new DataGridViewTextBoxColumn();
-            gender = new DataGridViewTextBoxColumn();
-            Column1 = new DataGridViewTextBoxColumn();
             textBox4 = new TextBox();
             textBox5 = new TextBox();
+            Age = new TextBox();
+            address = new TextBox();
+            Nationality = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -111,11 +105,11 @@
             button1.TabIndex = 57;
             button1.Text = "Add";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { RoomId, Column2, Column3, name, Email, Phone, gender, Column1 });
             dataGridView1.Location = new Point(97, 263);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
@@ -127,7 +121,7 @@
             textBox1.Location = new Point(682, 87);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "Name";
+            textBox1.PlaceholderText = "UserName";
             textBox1.Size = new Size(133, 29);
             textBox1.TabIndex = 54;
             // 
@@ -168,56 +162,6 @@
             comboBox2.Size = new Size(133, 23);
             comboBox2.TabIndex = 78;
             // 
-            // RoomId
-            // 
-            dataGridViewCellStyle3.BackColor = Color.FromArgb(103, 177, 198);
-            RoomId.DefaultCellStyle = dataGridViewCellStyle3;
-            RoomId.HeaderText = "Id";
-            RoomId.Name = "RoomId";
-            RoomId.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "UserName";
-            Column2.Name = "Column2";
-            Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "Password";
-            Column3.Name = "Column3";
-            Column3.ReadOnly = true;
-            // 
-            // name
-            // 
-            name.HeaderText = "Name";
-            name.Name = "name";
-            name.ReadOnly = true;
-            // 
-            // Email
-            // 
-            Email.HeaderText = "Email";
-            Email.Name = "Email";
-            Email.ReadOnly = true;
-            // 
-            // Phone
-            // 
-            Phone.HeaderText = "Phone";
-            Phone.Name = "Phone";
-            Phone.ReadOnly = true;
-            // 
-            // gender
-            // 
-            gender.HeaderText = "Gender";
-            gender.Name = "gender";
-            gender.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "Membership";
-            Column1.Name = "Column1";
-            Column1.ReadOnly = true;
-            // 
             // textBox4
             // 
             textBox4.Location = new Point(372, 87);
@@ -236,11 +180,41 @@
             textBox5.Size = new Size(133, 29);
             textBox5.TabIndex = 80;
             // 
+            // Age
+            // 
+            Age.Location = new Point(844, 87);
+            Age.Multiline = true;
+            Age.Name = "Age";
+            Age.PlaceholderText = "Age";
+            Age.Size = new Size(133, 29);
+            Age.TabIndex = 81;
+            // 
+            // address
+            // 
+            address.Location = new Point(844, 148);
+            address.Multiline = true;
+            address.Name = "address";
+            address.PlaceholderText = "address";
+            address.Size = new Size(133, 29);
+            address.TabIndex = 82;
+            // 
+            // Nationality
+            // 
+            Nationality.Location = new Point(790, 206);
+            Nationality.Multiline = true;
+            Nationality.Name = "Nationality";
+            Nationality.PlaceholderText = "Nationality";
+            Nationality.Size = new Size(133, 29);
+            Nationality.TabIndex = 83;
+            // 
             // UC_Clients
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(224, 224, 224);
+            Controls.Add(Nationality);
+            Controls.Add(address);
+            Controls.Add(Age);
             Controls.Add(textBox5);
             Controls.Add(textBox4);
             Controls.Add(comboBox2);
@@ -276,15 +250,10 @@
         private TextBox textBox6;
         private ComboBox comboBox1;
         private ComboBox comboBox2;
-        private DataGridViewTextBoxColumn RoomId;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn name;
-        private DataGridViewTextBoxColumn Email;
-        private DataGridViewTextBoxColumn Phone;
-        private DataGridViewTextBoxColumn gender;
-        private DataGridViewTextBoxColumn Column1;
         private TextBox textBox4;
         private TextBox textBox5;
+        private TextBox Age;
+        private TextBox address;
+        private TextBox Nationality;
     }
 }
