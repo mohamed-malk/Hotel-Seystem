@@ -2,7 +2,6 @@
 {
     public partial class Client : Person
     {
-        public new int Id { get; private set; }
         // Proprieties
         public string Nationality { get; set; } = null!;
         public int Points { get; set; }

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmployeeForm));
-            pictureBox6 = new PictureBox();
             label8 = new Label();
             panel2 = new Panel();
             pictureBox8 = new PictureBox();
@@ -40,10 +39,8 @@
             panelContainer3 = new Panel();
             pictureBox1 = new PictureBox();
             button1 = new Button();
-            button2 = new Button();
             button3 = new Button();
             button4 = new Button();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
@@ -51,16 +48,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
-            // 
-            // pictureBox6
-            // 
-            pictureBox6.Image = Properties.Resources.room;
-            pictureBox6.Location = new Point(15, 184);
-            pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(46, 51);
-            pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox6.TabIndex = 84;
-            pictureBox6.TabStop = false;
             // 
             // label8
             // 
@@ -117,7 +104,7 @@
             // pictureBox9
             // 
             pictureBox9.Image = Properties.Resources.customers;
-            pictureBox9.Location = new Point(10, 242);
+            pictureBox9.Location = new Point(10, 187);
             pictureBox9.Name = "pictureBox9";
             pictureBox9.Size = new Size(53, 54);
             pictureBox9.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -127,7 +114,7 @@
             // pictureBox5
             // 
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(13, 301);
+            pictureBox5.Location = new Point(13, 246);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(50, 50);
             pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -169,23 +156,6 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
-            // button2
-            // 
-            button2.BackColor = Color.White;
-            button2.FlatAppearance.BorderColor = Color.White;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(103, 177, 198);
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Segoe UI", 20.25F);
-            button2.Location = new Point(68, 180);
-            button2.Name = "button2";
-            button2.Size = new Size(171, 60);
-            button2.TabIndex = 98;
-            button2.Text = "Rooms";
-            button2.TextAlign = ContentAlignment.MiddleLeft;
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
-            // 
             // button3
             // 
             button3.BackColor = Color.White;
@@ -194,7 +164,7 @@
             button3.FlatAppearance.MouseOverBackColor = Color.FromArgb(103, 177, 198);
             button3.FlatStyle = FlatStyle.Flat;
             button3.Font = new Font("Segoe UI", 20.25F);
-            button3.Location = new Point(68, 236);
+            button3.Location = new Point(68, 181);
             button3.Name = "button3";
             button3.Size = new Size(171, 60);
             button3.TabIndex = 99;
@@ -211,7 +181,7 @@
             button4.FlatAppearance.MouseOverBackColor = Color.FromArgb(103, 177, 198);
             button4.FlatStyle = FlatStyle.Flat;
             button4.Font = new Font("Segoe UI", 20.25F);
-            button4.Location = new Point(68, 295);
+            button4.Location = new Point(68, 240);
             button4.Name = "button4";
             button4.Size = new Size(171, 60);
             button4.TabIndex = 100;
@@ -220,7 +190,7 @@
             button4.UseVisualStyleBackColor = false;
             button4.Click += button4_Click;
             // 
-            // Employee
+            // EmployeeForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -229,8 +199,6 @@
             Controls.Add(button4);
             Controls.Add(pictureBox1);
             Controls.Add(button3);
-            Controls.Add(pictureBox6);
-            Controls.Add(button2);
             Controls.Add(label8);
             Controls.Add(button1);
             Controls.Add(panel2);
@@ -238,10 +206,9 @@
             Controls.Add(pictureBox9);
             Controls.Add(pictureBox5);
             Controls.Add(panelContainer3);
-            Name = "Employee";
+            Name = "EmployeeForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Employee";
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
@@ -254,7 +221,6 @@
         }
 
         #endregion
-        private PictureBox pictureBox6;
         private Label label8;
         private Panel panel2;
         private PictureBox pictureBox8;
@@ -265,7 +231,6 @@
         private Panel panelContainer3;
         private PictureBox pictureBox1;
         private Button button1;
-        private Button button2;
         private Button button3;
         private Button button4;
     }

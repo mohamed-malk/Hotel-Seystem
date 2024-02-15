@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Hotel_System_Back.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -39,17 +40,26 @@ namespace Hotel_System_Front.User_Control
 
         private void Uc_Reservation_Load(object sender, EventArgs e)
         {
-            var rooms = RoomReserve.GetAvailableRooms();
-            foreach(Room room in rooms)
-            {
-                comboBox1.Items.Add(room.Id);
-            }
 
+          
+
+             var rooms = RoomReserve.GetAvailableRooms();
+            foreach (Room room in rooms)
+            {
+
+                comboBox1.Items.Add(room.Id);
+               
+               
+            }
+            
             var clients = ClientRepo.GetAll();
             foreach( Client client in clients)
             {
                 comboBox2.Items.Add(client.Id);
+               
             }
+
+            dataGridView1.DataSource = reserve.GetReservationList();
         }
     }
 }

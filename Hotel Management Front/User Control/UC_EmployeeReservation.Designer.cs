@@ -30,13 +30,6 @@
         {
             dateTimePicker2 = new DateTimePicker();
             dataGridView1 = new DataGridView();
-            Column5 = new DataGridViewTextBoxColumn();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column6 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
-            BookDate = new DataGridViewTextBoxColumn();
             button2 = new Button();
             button1 = new Button();
             textBox2 = new TextBox();
@@ -57,46 +50,10 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column5, Column1, Column2, Column6, Column3, Column4, BookDate });
             dataGridView1.Location = new Point(67, 275);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(711, 46);
+            dataGridView1.Size = new Size(711, 142);
             dataGridView1.TabIndex = 80;
-            // 
-            // Column5
-            // 
-            Column5.HeaderText = "BookId";
-            Column5.Name = "Column5";
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "Room";
-            Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Client";
-            Column2.Name = "Column2";
-            // 
-            // Column6
-            // 
-            Column6.HeaderText = "Checkin";
-            Column6.Name = "Column6";
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "Checkout";
-            Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            Column4.HeaderText = "Amount";
-            Column4.Name = "Column4";
-            // 
-            // BookDate
-            // 
-            BookDate.HeaderText = "BookDate";
-            BookDate.Name = "BookDate";
             // 
             // button2
             // 
@@ -107,6 +64,7 @@
             button2.TabIndex = 79;
             button2.Text = "Cancel";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // button1
             // 
@@ -117,6 +75,7 @@
             button1.TabIndex = 78;
             button1.Text = "Book";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // textBox2
             // 
@@ -175,6 +134,7 @@
             Controls.Add(label9);
             Name = "UC_EmployeeReservation";
             Size = new Size(1096, 638);
+            Load += UC_EmployeeReservation_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -184,13 +144,6 @@
 
         private DateTimePicker dateTimePicker2;
         private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn Column5;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column6;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column4;
-        private DataGridViewTextBoxColumn BookDate;
         private Button button2;
         private Button button1;
         private TextBox textBox2;
