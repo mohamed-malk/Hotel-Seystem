@@ -32,32 +32,36 @@ namespace Hotel_System_Front.User_Control
         {
             //  int id = itextBox1.Text();
             //    int Id =
-            string type;
+            RoomType type;
             int Number = int.Parse(textBox1.Text);
             int Rate = int.Parse(textBox2.Text);
+
+            
             if(comboBox1.Text == "Single")
             {
-                type = "1";
+                type = RoomType.Single;
 
             }
             else if(comboBox1.Text == "Double") 
             {
-                type = "2";
-            }
-            else
-            {
-                type = "3";
+                type = RoomType.Double;
             }
 
-            RoomType type2 = (RoomType)Enum.Parse(typeof(RoomType), type);
+            else
+            {
+                type = RoomType.Triple;
+            }
+
+          //  RoomType type2 = (RoomType)Enum.Parse(typeof(RoomType), type);
             
            
-            bool IsAvailable = comboBox2.Text == "False" ? true : false;
+            bool IsAvailable = comboBox2.Text == "False" ? false : true;
             Room r = new Room()
             {
                 Number = Number,
                 Rate = Rate,
-                Type = type2,
+                Type = type,
+                IsAvailable = IsAvailable
                 
             };
             room.Add(r); ;

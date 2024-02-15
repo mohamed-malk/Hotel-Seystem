@@ -28,29 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             textBox5 = new TextBox();
             comboBox2 = new ComboBox();
             comboBox1 = new ComboBox();
             textBox6 = new TextBox();
             textBox1 = new TextBox();
             label9 = new Label();
-            Column1 = new DataGridViewTextBoxColumn();
-            gender = new DataGridViewTextBoxColumn();
-            Phone = new DataGridViewTextBoxColumn();
-            Email = new DataGridViewTextBoxColumn();
-            name = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            RoomId = new DataGridViewTextBoxColumn();
             textBox4 = new TextBox();
             textBox3 = new TextBox();
             textBox2 = new TextBox();
             button4 = new Button();
             update = new Button();
-            button2 = new Button();
             button1 = new Button();
             dataGridView1 = new DataGridView();
+            address = new TextBox();
+            Age = new TextBox();
+            Nationality = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -109,56 +102,6 @@
             label9.TabIndex = 81;
             label9.Text = "Manage Clients";
             // 
-            // Column1
-            // 
-            Column1.HeaderText = "Membership";
-            Column1.Name = "Column1";
-            Column1.ReadOnly = true;
-            // 
-            // gender
-            // 
-            gender.HeaderText = "Gender";
-            gender.Name = "gender";
-            gender.ReadOnly = true;
-            // 
-            // Phone
-            // 
-            Phone.HeaderText = "Phone";
-            Phone.Name = "Phone";
-            Phone.ReadOnly = true;
-            // 
-            // Email
-            // 
-            Email.HeaderText = "Email";
-            Email.Name = "Email";
-            Email.ReadOnly = true;
-            // 
-            // name
-            // 
-            name.HeaderText = "Name";
-            name.Name = "name";
-            name.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "Password";
-            Column3.Name = "Column3";
-            Column3.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "UserName";
-            Column2.Name = "Column2";
-            Column2.ReadOnly = true;
-            // 
-            // RoomId
-            // 
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(103, 177, 198);
-            RoomId.DefaultCellStyle = dataGridViewCellStyle1;
-            RoomId.HeaderText = "Id";
-            RoomId.Name = "RoomId";
-            RoomId.ReadOnly = true;
-            // 
             // textBox4
             // 
             textBox4.Location = new Point(378, 113);
@@ -189,7 +132,7 @@
             // button4
             // 
             button4.BackColor = Color.FromArgb(103, 177, 198);
-            button4.Location = new Point(633, 232);
+            button4.Location = new Point(602, 232);
             button4.Name = "button4";
             button4.Size = new Size(90, 34);
             button4.TabIndex = 87;
@@ -199,22 +142,12 @@
             // update
             // 
             update.BackColor = Color.FromArgb(103, 177, 198);
-            update.Location = new Point(510, 232);
+            update.Location = new Point(434, 232);
             update.Name = "update";
             update.Size = new Size(90, 34);
             update.TabIndex = 86;
             update.Text = "Update";
             update.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            button2.BackColor = Color.FromArgb(103, 177, 198);
-            button2.Location = new Point(391, 232);
-            button2.Name = "button2";
-            button2.Size = new Size(90, 34);
-            button2.TabIndex = 85;
-            button2.Text = "Save";
-            button2.UseVisualStyleBackColor = false;
             // 
             // button1
             // 
@@ -230,18 +163,47 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { RoomId, Column2, Column3, name, Email, Phone, gender, Column1 });
             dataGridView1.Location = new Point(103, 289);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
-            dataGridView1.Size = new Size(841, 87);
+            dataGridView1.Size = new Size(841, 158);
             dataGridView1.TabIndex = 83;
+            // 
+            // address
+            // 
+            address.Location = new Point(846, 113);
+            address.Multiline = true;
+            address.Name = "address";
+            address.PlaceholderText = "address";
+            address.Size = new Size(133, 29);
+            address.TabIndex = 95;
+            // 
+            // Age
+            // 
+            Age.Location = new Point(846, 168);
+            Age.Multiline = true;
+            Age.Name = "Age";
+            Age.PlaceholderText = "Age";
+            Age.Size = new Size(133, 29);
+            Age.TabIndex = 96;
+            // 
+            // Nationality
+            // 
+            Nationality.Location = new Point(846, 221);
+            Nationality.Multiline = true;
+            Nationality.Name = "Nationality";
+            Nationality.PlaceholderText = "Nationality";
+            Nationality.Size = new Size(133, 29);
+            Nationality.TabIndex = 97;
             // 
             // UC_EmployeeClient
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(224, 224, 224);
+            Controls.Add(Nationality);
+            Controls.Add(Age);
+            Controls.Add(address);
             Controls.Add(textBox5);
             Controls.Add(comboBox2);
             Controls.Add(comboBox1);
@@ -253,7 +215,6 @@
             Controls.Add(textBox2);
             Controls.Add(button4);
             Controls.Add(update);
-            Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(dataGridView1);
             Name = "UC_EmployeeClient";
@@ -271,21 +232,15 @@
         private TextBox textBox6;
         private TextBox textBox1;
         private Label label9;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn gender;
-        private DataGridViewTextBoxColumn Phone;
-        private DataGridViewTextBoxColumn Email;
-        private DataGridViewTextBoxColumn name;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn RoomId;
         private TextBox textBox4;
         private TextBox textBox3;
         private TextBox textBox2;
         private Button button4;
         private Button update;
-        private Button button2;
         private Button button1;
         private DataGridView dataGridView1;
+        private TextBox address;
+        private TextBox Age;
+        private TextBox Nationality;
     }
 }

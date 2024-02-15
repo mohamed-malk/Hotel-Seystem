@@ -72,8 +72,8 @@ public class ReservationRepo
         
         // Update in Db sets and DB 
 
-        _dbContext.TransactionTable.Add(  // Add the Reservation To the Transaction
-            CreateTransaction(room.Number, false, payment.Amount, payment.Rest));
+        //_dbContext.TransactionTable.Add(  // Add the Reservation To the Transaction
+        //    CreateTransaction(room.Number, false, payment.Amount, payment.Rest));
         
         _dbContext.Reservations.Add(reservation);
         _dbContext.Clients.Update(client);
@@ -105,9 +105,9 @@ public class ReservationRepo
             room.IsAvailable = true; // Mark the room as not occupied
         else throw new Exception("Room Doesn't Exist, Something Wrong");
 
-        _dbContext.TransactionTable.Add( // Add the To the Transaction
-            CreateTransaction(room.Number, true,
-                reservation.Payment.Amount, reservation.Payment.Rest));
+        //_dbContext.TransactionTable.Add( // Add the To the Transaction
+        //    CreateTransaction(room.Number, true,
+        //        reservation.Payment.Amount, reservation.Payment.Rest));
 
         _dbContext.Rooms.Update(room);
         _dbContext.Reservations.Remove(reservation);
