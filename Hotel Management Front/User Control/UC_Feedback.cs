@@ -16,5 +16,13 @@ namespace Hotel_System_Front.User_Control
         {
             InitializeComponent();
         }
+
+        private void UC_Feedback_Load(object sender, EventArgs e)
+        {
+            InformationRepo informationRepo = new InformationRepo();
+            dataGridView1.DataSource = informationRepo.Report(DateTime.Now.Month);
+
+
+        }
     }
 }

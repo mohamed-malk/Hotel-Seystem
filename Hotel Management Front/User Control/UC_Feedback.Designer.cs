@@ -37,11 +37,11 @@
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Baskerville Old Face", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label9.Location = new Point(316, 18);
+            label9.Location = new Point(344, 18);
             label9.Name = "label9";
-            label9.Size = new Size(352, 43);
+            label9.Size = new Size(141, 43);
             label9.TabIndex = 33;
-            label9.Text = "Customer's Feedback";
+            label9.Text = "Reports";
             // 
             // dataGridView1
             // 
@@ -60,6 +60,7 @@
             Controls.Add(label9);
             Name = "UC_Feedback";
             Size = new Size(1096, 638);
+            Load += UC_Feedback_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
