@@ -131,16 +131,51 @@ public class EmployeeRepo : PersonRepo
     }
 
     public List<Employee> GetAll() => _dbContext.Employees.ToList();
+
+    public List<EmployeeView> GetAllShow() => _dbContext.Employees
+        .Select(employee => new EmployeeView(employee.Id, employee.Name,
+            employee.UserName, employee.Email, employee.Password,
+            employee.NId, employee.Age, employee.Gender,
+            employee.Address, employee.Salary,
+            employee.Attend)).ToList();
     public override Employee? GetById(int id) => _dbContext.Employees.Find(id);
-    public List<Employee> GetByName(string name)
+
+    public  EmployeeView? GetByIdView(int id)
+    {
+       Employee? employee = GetById(id);
+       return new EmployeeView(employee!.Id, employee.Name,
+           employee.UserName, employee.Email, employee.Password,
+           employee.NId, employee.Age, employee.Gender,
+           employee.Address, employee.Salary,
+           employee.Attend);
+    }
+
+    public List<EmployeeView> GetByName(string name)
         => _dbContext.Employees.Filter(e =>
-            e.Name.ToLower() == name.ToLower()).ToList();
-    public List<Employee> GetByNamePattern(string pattern)
+                e.Name.ToLower() == name.ToLower())
+            .Select(employee => new EmployeeView(employee.Id, employee.Name,
+                employee.UserName, employee.Email, employee.Password,
+                employee.NId, employee.Age, employee.Gender,
+                employee.Address, employee.Salary,
+                employee.Attend)).ToList();
+
+    public List<EmployeeView> GetByNamePattern(string pattern)
         => _dbContext.Employees.Filter(e =>
-            e.Name.ToLower().Contains(pattern.ToLower())).ToList();
-    public List<Employee> GetByAddress(string address)
+                e.Name.ToLower().Contains(pattern.ToLower()))
+            .Select(employee => new EmployeeView(employee.Id, employee.Name,
+                employee.UserName, employee.Email, employee.Password,
+                employee.NId, employee.Age, employee.Gender,
+                employee.Address, employee.Salary,
+                employee.Attend)).ToList();
+
+    public List<EmployeeView> GetByAddress(string address)
         => _dbContext.Employees.Filter(e =>
-            e.Address.ToLower() == address.ToLower()).ToList();
+                e.Address.ToLower() == address.ToLower())
+            .Select(employee => new EmployeeView(employee.Id, employee.Name,
+                employee.UserName, employee.Email, employee.Password,
+                employee.NId, employee.Age, employee.Gender,
+                employee.Address, employee.Salary,
+                employee.Attend)).ToList();
 
     public void Update(Employee employee)
     {
@@ -166,8 +201,8 @@ public class EmployeeRepo : PersonRepo
                 case Properties.Attend:
                     employee.Attend = (int)item.Value;
                     break;
-                default:
-                    throw Exceptions.NotFoundProperty(item.Key.ToString());
+                //default:
+                //    throw Exceptions.NotFoundProperty(item.Key.ToString());
             }
         }
         _dbContext.Employees.Update(employee);

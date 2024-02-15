@@ -30,7 +30,6 @@
         {
             dateTimePicker2 = new DateTimePicker();
             dataGridView1 = new DataGridView();
-            button2 = new Button();
             button1 = new Button();
             textBox2 = new TextBox();
             dateTimePicker1 = new DateTimePicker();
@@ -42,36 +41,31 @@
             // 
             // dateTimePicker2
             // 
-            dateTimePicker2.Location = new Point(536, 149);
+            dateTimePicker2.Location = new Point(613, 199);
+            dateTimePicker2.Margin = new Padding(3, 4, 3, 4);
             dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(156, 23);
+            dateTimePicker2.Size = new Size(178, 27);
             dateTimePicker2.TabIndex = 81;
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(67, 275);
+            dataGridView1.Location = new Point(63, 391);
+            dataGridView1.Margin = new Padding(3, 4, 3, 4);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(711, 142);
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(813, 189);
             dataGridView1.TabIndex = 80;
-            // 
-            // button2
-            // 
-            button2.BackColor = Color.FromArgb(103, 177, 198);
-            button2.Location = new Point(456, 202);
-            button2.Name = "button2";
-            button2.Size = new Size(87, 34);
-            button2.TabIndex = 79;
-            button2.Text = "Cancel";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
+            dataGridView1.CellClick += dataGridView1_CellClick;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // button1
             // 
             button1.BackColor = Color.FromArgb(103, 177, 198);
-            button1.Location = new Point(310, 202);
+            button1.Location = new Point(437, 249);
+            button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
-            button1.Size = new Size(87, 34);
+            button1.Size = new Size(99, 45);
             button1.TabIndex = 78;
             button1.Text = "Book";
             button1.UseVisualStyleBackColor = false;
@@ -79,61 +73,65 @@
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(713, 149);
+            textBox2.Location = new Point(815, 199);
+            textBox2.Margin = new Padding(3, 4, 3, 4);
             textBox2.Name = "textBox2";
             textBox2.PlaceholderText = "Amount";
-            textBox2.Size = new Size(100, 23);
+            textBox2.Size = new Size(114, 27);
             textBox2.TabIndex = 77;
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Location = new Point(317, 149);
+            dateTimePicker1.Location = new Point(362, 199);
+            dateTimePicker1.Margin = new Padding(3, 4, 3, 4);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(200, 23);
+            dateTimePicker1.Size = new Size(228, 27);
             dateTimePicker1.TabIndex = 76;
             // 
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(178, 149);
+            comboBox1.Location = new Point(203, 199);
+            comboBox1.Margin = new Padding(3, 4, 3, 4);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 23);
+            comboBox1.Size = new Size(138, 28);
             comboBox1.TabIndex = 74;
             // 
             // comboBox2
             // 
             comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(40, 149);
+            comboBox2.Location = new Point(46, 199);
+            comboBox2.Margin = new Padding(3, 4, 3, 4);
             comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(121, 23);
+            comboBox2.Size = new Size(138, 28);
             comboBox2.TabIndex = 75;
             // 
             // label9
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Baskerville Old Face", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label9.Location = new Point(363, 18);
+            label9.Location = new Point(415, 24);
             label9.Name = "label9";
-            label9.Size = new Size(202, 43);
+            label9.Size = new Size(249, 53);
             label9.TabIndex = 73;
             label9.Text = "Reservation";
             // 
             // UC_EmployeeReservation
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(224, 224, 224);
             Controls.Add(dateTimePicker2);
             Controls.Add(dataGridView1);
-            Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(textBox2);
             Controls.Add(dateTimePicker1);
             Controls.Add(comboBox1);
             Controls.Add(comboBox2);
             Controls.Add(label9);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "UC_EmployeeReservation";
-            Size = new Size(1096, 638);
+            Size = new Size(1253, 851);
             Load += UC_EmployeeReservation_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
@@ -144,7 +142,6 @@
 
         private DateTimePicker dateTimePicker2;
         private DataGridView dataGridView1;
-        private Button button2;
         private Button button1;
         private TextBox textBox2;
         private DateTimePicker dateTimePicker1;

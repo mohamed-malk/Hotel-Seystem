@@ -1,6 +1,3 @@
-using Hotel_System_Back.Models;
-using Microsoft.EntityFrameworkCore;
-
 namespace Hotel_System_Front
 {
     internal static class Program
@@ -13,8 +10,9 @@ namespace Hotel_System_Front
         {
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
+
             ApplicationConfiguration.Initialize();
-            Application.Run(new Login());
+            Application.Run(new main(new Employee(){Id = 1}));
         }
     }
 }

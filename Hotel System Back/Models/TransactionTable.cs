@@ -2,6 +2,7 @@
 {
     public class TransactionTable
     {
+        public int Id { get; set; }
         public DateTime Date { get; set; }
         public int RoomNumber { get; set; }
         public bool IsCompleted { get; set; }

@@ -54,7 +54,7 @@ namespace Hotel_System_Front
 
         private void button6_Click(object sender, EventArgs e)
         {
-            UC_Feedback uc = new UC_Feedback();
+            Reports uc = new Reports();
             addUserControl(uc);
 
         }

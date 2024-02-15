@@ -1,6 +1,4 @@
-﻿using Hotel_System_Back.Models;
-
-namespace Hotel_System_Back.Services;
+﻿namespace Hotel_System_Back.Services;
 
 public class ClientRepo : PersonRepo
 {
@@ -19,7 +17,7 @@ public class ClientRepo : PersonRepo
     /// <summary>
     /// For Registration
     /// </summary>
-    public Client Add(string userName, string email, 
+    public Client Add(string userName, string email,
         string password, string nId)
     {
         Client client = new()
@@ -78,7 +76,14 @@ public class ClientRepo : PersonRepo
     /// Get All Clients From DataBase
     /// </summary>
     /// <returns><see cref="List{T}"/> of Client of their Data </returns>
-    public List<Client> GetAll() => _dbContext.Clients.ToList();
+    public List<ClientView> GetAll() => _dbContext.Clients
+        .Select(client => new ClientView(client.Id, client.Name,
+            client.UserName, client.Email, client.Password,
+            client.NId, client.Age, client.Gender,
+            client.Address, client.Nationality,
+            client.Points, client.MemberShipId,
+            client.MemberShip!.Name))
+        .ToList();
 
     /// <summary>
     /// Get Client From DataBase By ID
@@ -86,32 +91,83 @@ public class ClientRepo : PersonRepo
     /// <returns>Client</returns>
     public override Client? GetById(int id) => _dbContext.Clients.Find(id);
 
+    public new ClientView? GetByIdShow(int id)
+    {
+        Client? client = GetById(id);
+        return new ClientView(client!.Id, client.Name,
+            client.UserName, client.Email, client.Password,
+            client.NId, client.Age, client.Gender,
+            client.Address, client.Nationality,
+            client.Points, client.MemberShipId,
+            client.MemberShip!.Name);
+    }
+
     /// <summary>
     /// Get All Clients From DataBase that their <paramref name="name"/>
     /// </summary>
     /// <param name="name">name to search</param>
     /// <returns><see cref="List{T}"/> of Clients</returns>
-    public List<Client> GetByName(string name)
-        => _dbContext.Clients.Filter(c =>
-            c.Name.ToLower() == name.ToLower()).ToList();
+    public List<ClientView> GetByName(string name)
+    {
+        var tempSet = _dbContext.Set<Client>();
+        tempSet.AddRange(_dbContext.Clients.Filter(c =>
+            c.Name.ToLower() == name.ToLower()));
 
-    /// <summary>
+        return tempSet.Include(m => m.MemberShip)
+            .Select(client => new ClientView(client.Id, client.Name,
+                client.UserName, client.Email, client.Password,
+                client.NId, client.Age, client.Gender,
+                client.Address, client.Nationality,
+                client.Points, client.MemberShipId,
+                client.MemberShip!.Name))
+            .ToList();
+    }
+
+/// <summary>
     /// Get All Clients From DataBase that their match the <paramref name="pattern"/>
     /// </summary>
     /// <param name="pattern">pattern to search</param>
     /// <returns><see cref="List{T}"/> of Clients</returns>
-    public List<Client> GetByNamePattern(string pattern)
-        => _dbContext.Clients.Filter(c =>
-            c.Name.ToLower().Contains(pattern.ToLower())).ToList();
+    public List<ClientView> GetByNamePattern(string pattern)
+    { 
+        var tempSet = _dbContext.Set<Client>();
+        tempSet.AddRange(
+            _dbContext.Clients.Filter(c =>
+                c.Name.ToLower().Contains(pattern.ToLower())));
 
-    /// <summary>
-    /// Get All Clients From DataBase that have <paramref name="address"/>
-    /// </summary>
-    /// <param name="address">address to search</param>
-    /// <returns><see cref="List{T}"/> of Clients</returns>
-    public List<Client> GetByAddress(string address)
-        => _dbContext.Clients.Filter(c =>
-            c.Address.ToLower() == address.ToLower()).ToList();
+        return tempSet.Include(m => m.MemberShip)
+            .Select(
+                client => new ClientView(client.Id, client.Name,
+                    client.UserName, client.Email, client.Password,
+                    client.NId, client.Age, client.Gender,
+                    client.Address, client.Nationality,
+                    client.Points, client.MemberShipId,
+                    client.MemberShip!.Name))
+            .ToList();
+    }
+
+/// <summary>
+/// Get All Clients From DataBase that have <paramref name="address"/>
+/// </summary>
+/// <param name="address">address to search</param>
+/// <returns><see cref="List{T}"/> of Clients</returns>
+public List<ClientView> GetByAddress(string address)
+    {
+        var tempSet = _dbContext.Set<Client>(); 
+        tempSet.AddRange(
+        _dbContext.Clients.Filter(c =>
+                c.Address.ToLower() == address.ToLower()));
+
+        return tempSet.Include(m => m.MemberShip)
+            .Select(
+                client => new ClientView(client.Id, client.Name,
+                    client.UserName, client.Email, client.Password,
+                    client.NId, client.Age, client.Gender,
+                    client.Address, client.Nationality,
+                    client.Points, client.MemberShipId,
+                    client.MemberShip!.Name))
+            .ToList();
+    }
 
     /// <summary>
     /// Update the client object
@@ -140,6 +196,7 @@ public class ClientRepo : PersonRepo
         perValues.Remove(Properties.Points);
         Client client = (Client)base.Update(id, perValues);
 
+
         // update other
         foreach (var item in newValues)
             switch (item.Key)
@@ -150,8 +207,8 @@ public class ClientRepo : PersonRepo
                 case Properties.Points:
                     client.UpdatePoints((int)item.Value);
                     break;
-                default:
-                    throw Exceptions.NotFoundProperty(item.Key.ToString());
+                //default:
+                //    throw Exceptions.NotFoundProperty(item.Key.ToString());
             }
 
         _dbContext.Clients.Update(client);

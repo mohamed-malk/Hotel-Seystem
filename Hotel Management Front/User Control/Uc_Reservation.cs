@@ -53,7 +53,7 @@ namespace Hotel_System_Front.User_Control
             }
             
             var clients = ClientRepo.GetAll();
-            foreach( Client client in clients)
+            foreach(ClientView client in clients)
             {
                 comboBox2.Items.Add(client.Id);
                

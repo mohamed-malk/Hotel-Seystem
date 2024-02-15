@@ -1,6 +1,4 @@
-﻿using Hotel_System_Back.Models;
-
-namespace Hotel_System_Back.Services
+﻿namespace Hotel_System_Back.Services
 {
     public abstract class PersonRepo
     {
@@ -23,6 +21,14 @@ namespace Hotel_System_Back.Services
         public abstract void Delete(string nId);
 
         public virtual Person? GetById(int id) => _dbContext.People.Find(id);
+        public PersonView? GetByIdShow(int id)
+        {
+            Person? person = GetById(id);
+            return new PersonView(person!.Id, person.Name,
+                person.UserName, person.Email, person.Password,
+                person.NId, person.Age, person.Gender,
+                person.Address);
+        }
         public virtual Person Update(int id, Dictionary<Properties, object> newValues)
         {
             Person? person = GetById(id);
@@ -53,8 +59,8 @@ namespace Hotel_System_Back.Services
                         case Properties.Address:
                             person.Address = (string)item.Value;
                             break;
-                        default:
-                            throw Exceptions.NotFoundProperty(item.Key.ToString());
+                        //default:
+                        //    throw Exceptions.NotFoundProperty(item.Key.ToString());
                     }
                 }
 

@@ -1,7 +1,4 @@
-﻿using Hotel_System_Back.Models;
-using Microsoft.EntityFrameworkCore;
-
-namespace Hotel_System_Back.Services;
+﻿namespace Hotel_System_Back.Services;
 public class ReservationRepo
 {
     private readonly HotelDbContext _dbContext = new();
@@ -71,8 +68,8 @@ public class ReservationRepo
 
         // Update in Db sets and DB 
 
-        //_dbContext.TransactionTable.Add(  // Add the Reservation To the Transaction
-        //    CreateTransaction(room.Number, false, payment.Amount, payment.Rest));
+        _dbContext.TransactionTable.Add(  // Add the Reservation To the Transaction
+            CreateTransaction(room.Number, false, payment.Amount, payment.Rest));
         
         _dbContext.Reservations.Add(reservation);
         _dbContext.Clients.Update(client);
@@ -104,9 +101,9 @@ public class ReservationRepo
             room.IsAvailable = true; // Mark the room as not occupied
         else throw new Exception("Room Doesn't Exist, Something Wrong");
 
-        //_dbContext.TransactionTable.Add( // Add the To the Transaction
-        //    CreateTransaction(room.Number, true,
-        //        reservation.Payment.Amount, reservation.Payment.Rest));
+        _dbContext.TransactionTable.Add( // Add the To the Transaction
+            CreateTransaction(room.Number, true,
+                reservation.Payment.Amount, reservation.Payment.Rest));
 
         _dbContext.Rooms.Update(room);
         _dbContext.Reservations.Remove(reservation);
@@ -114,6 +111,18 @@ public class ReservationRepo
     }
     public List<Reservation> GetReservationList() =>
         _dbContext.Reservations.ToList();
+
+    public List<ReservationView> GetReservationsView() =>
+        _dbContext.Reservations
+            .Include(r => r.Payment)
+            .Include(r => r.Client)
+            .Include(r => r.Room)
+            .Select(r => new ReservationView(
+                r.ReservationDate, r.CheckInDate, r.CheckOutDate,
+                r.DurationDays, r.ClientId, r.Client.Name, r.RoomId,
+                r.Room.Number, r.PaymentId, r.Payment.Date,
+                r.Payment.Amount, r.Payment.Rest))
+            .ToList();
 
     public List<Payment> GetPaymentList() =>
         _dbContext.Payments.ToList();

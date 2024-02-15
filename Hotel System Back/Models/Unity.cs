@@ -9,10 +9,15 @@ public enum Properties
 {
     Id ,UserName , Email , Password ,
     NId, Name ,Age , Gender , Address,
+    Salary, Attend, Nationality, Points, 
+    MemberShipId, Rate, FoodQuality, Rest,
+    Description, Date, Advantages, Amount,
+    TargetAmount, ReservationDate, Number,
+    CheckInDate, CheckOutDate, DurationDays,
+    Type, IsAvailable, Price, RoomNumber,
+    IsCompleted, Paid, 
+    ClientId, RoomId, PaymentId
 
-    Salary, Attend,
-
-    Nationality, Points, MemberShipId
 }
 internal static class Unity
 {

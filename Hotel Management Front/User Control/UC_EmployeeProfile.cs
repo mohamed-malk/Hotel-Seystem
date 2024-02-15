@@ -6,27 +6,34 @@ namespace Hotel_System_Front.User_Control
     {
         readonly Employee _employee;
         readonly EmployeeRepo _employeeRepo;
+        
         public UC_EmployeeProfile(Employee employee)
         {
             InitializeComponent();
-            _employeeRepo = new();
+            
+            _employeeRepo = new EmployeeRepo();
             _employee = employee;
+            
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void UpdateView()
         {
-            //  _employee = u.UpdateProfile(employee);
-            // dataGridView1.DataSource = new List<Employee> { _employee };
+            EmployeeView employeeView = _employeeRepo.GetByIdView(_employee.Id)!.Value;
+            
+            
+            dataGridView1.DataSource = new List<EmployeeView>
+                {  employeeView};
         }
 
         private void UC_EmployeeProfile_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = new List<Employee> { _employee };
+            UpdateView();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             _employeeRepo.Update(_employee);
+            UpdateView();
         }
     }
 }

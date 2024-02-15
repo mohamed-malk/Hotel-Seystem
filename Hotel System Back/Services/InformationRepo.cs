@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Hotel_System_Back.Services
+﻿namespace Hotel_System_Back.Services
 {
     public readonly struct MemberShipClients
         (string memberShipName, int clientsNumber)
@@ -24,6 +22,23 @@ namespace Hotel_System_Back.Services
         public Dictionary<string, float> Insights(DateTime? dataTime = null)
         {
             var data = Report(dataTime);
+            Dictionary<string, float> res = new()
+            {
+                { "Total Income", data.Sum(t => t.Paid + t.Rest) },
+                { "Actual Income", data.Sum(t => t.Paid) },
+                { "Out Income", data.Sum(t => t.Rest) }
+            };
+            return res;
+        }
+
+        public List<TransactionTable> Report(int month) =>
+            _dbContext.TransactionTable
+                .Filter(t => t.Date.Month == month).ToList();
+
+        public Dictionary<string, float> Insights(int month)
+        {
+            var data = Report(month);
+
             Dictionary<string, float> res = new()
             {
                 { "Total Income", data.Sum(t => t.Paid + t.Rest) },

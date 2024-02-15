@@ -54,6 +54,10 @@
   <ItemGroup>
     <Using Include="Hotel_System_Back.Config" />
     <Using Include="Hotel_System_Back.Models" />
+    <Using Include="Hotel_System_Back.Models.Properties">
+      <Alias>PropertiesNames </Alias>
+    </Using>
+    <Using Include="Hotel_System_Back.ModelViews" />
     <Using Include="Hotel_System_Back.Services" />
     <Using Include="Microsoft.EntityFrameworkCore" />
   </ItemGroup>

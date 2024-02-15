@@ -11,6 +11,7 @@ public class Reservation
 
     [NotMapped]
     public int DurationDays => (CheckOutDate - CheckInDate).Days;
+
     #endregion
 
     #region Relation Mapping
