@@ -69,7 +69,6 @@ public class ReservationRepo
         room.IsAvailable = false;
         client.UpdatePoints(client.Points + 1); // Add point for user  
 
-        
         // Update in Db sets and DB 
 
         _dbContext.TransactionTable.Add(  // Add the Reservation To the Transaction

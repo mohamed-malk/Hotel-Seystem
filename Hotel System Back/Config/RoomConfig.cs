@@ -30,7 +30,7 @@ namespace Hotel_System_Back.Config
             builder.ToTable(b =>
                 b.HasCheckConstraint("RateRange", "[Rate] > 0 and [Rate] < 6"));
             builder.ToTable(b =>
-                b.HasCheckConstraint("TypeRange", "[Type] > 0 and [Type] < 3"));
+                b.HasCheckConstraint("TypeRange", "[Type] > 0 and [Type] <= 3"));
         }
     }
 }
