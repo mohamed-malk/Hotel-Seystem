@@ -28,16 +28,16 @@ namespace Hotel_System_Front.User_Control
             string username = textBox3.Text;
             string password = textBox2.Text;
             string email = textBox5.Text;
-            int age = int.Parse( textBox8.Text);
+            int age = int.Parse(textBox8.Text);
             int attend = int.Parse(textBox10.Text);
             string Address = textBox6.Text;
-            float salary = float.Parse( textBox7.Text);
+            float salary = float.Parse(textBox7.Text);
 
             bool gender = comboBox1.Text == "Famael,f" ? true : false;
 
             Person emp = new Employee()
             {
-                
+
                 Name = name,
                 NId = Nid,
                 Address = Address,
@@ -46,14 +46,19 @@ namespace Hotel_System_Front.User_Control
                 Gender = gender,
                 UserName = username,
                 Password = password,
-                Attend= attend,
-                Salary= salary  
-               // Nationality = nationaltiy
+                Attend = attend,
+                Salary = salary
+                // Nationality = nationaltiy
             };
-         //   employee.CreateManager(emp); ;
+            //   employee.CreateManager(emp); ;
             //ClientRepo ClientRepo = new ClientRepo();
 
             dataGridView1.DataSource = new List<Person> { emp };
+        }
+
+        private void UC_Users_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -87,9 +87,12 @@ namespace Hotel_System_Front
                 secondForm.ShowDialog();
                 this.Show();
             }
-
+              
         }
 
-        
+        private void Email_TextChanged(object sender, EventArgs e)
+        { 
+
+        }
     }
 }

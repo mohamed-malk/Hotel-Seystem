@@ -32,7 +32,8 @@ namespace Hotel_System_Front
 
             {
                 errorProvider1.SetError(Username, "User is required");
-                return; }
+                return;
+            }
             else
             {
                 errorProvider1.SetError(Username, string.Empty);
@@ -48,11 +49,11 @@ namespace Hotel_System_Front
             {
                 errorProvider1.SetError(Password, string.Empty);
             }
-            
+
             Person? person = personRepo.Login(Username.Text, Password.Text);
-            
+
             if (person != null)
-            { 
+            {
                 if (person.ObjectName == UserType.Client)
                 {
                     this.Hide();
@@ -62,7 +63,7 @@ namespace Hotel_System_Front
                 }
                 else if (person.ObjectName == UserType.Employee)
                 {
-                  if(person.Id == Employee.ManagerId) 
+                    if (person.Id == Employee.ManagerId)
                     {
                         this.Hide();
                         main secondForm = new main((Employee)person);
@@ -81,9 +82,13 @@ namespace Hotel_System_Front
             }
             else
             {
-                MessageBox.Show("Incorrect username or password") ;
+                MessageBox.Show("Incorrect username or password");
             }
         }
 
+        private void Username_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
