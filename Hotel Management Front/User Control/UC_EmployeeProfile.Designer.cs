@@ -30,7 +30,6 @@
         {
             label9 = new Label();
             dataGridView1 = new DataGridView();
-            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -54,24 +53,11 @@
             dataGridView1.Size = new Size(778, 287);
             dataGridView1.TabIndex = 64;
             // 
-            // button2
-            // 
-            button2.BackColor = Color.FromArgb(103, 177, 198);
-            button2.Location = new Point(507, 463);
-            button2.Margin = new Padding(3, 4, 3, 4);
-            button2.Name = "button2";
-            button2.Size = new Size(103, 45);
-            button2.TabIndex = 66;
-            button2.Text = "Save";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
-            // 
             // UC_EmployeeProfile
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(224, 224, 224);
-            Controls.Add(button2);
             Controls.Add(dataGridView1);
             Controls.Add(label9);
             Margin = new Padding(3, 4, 3, 4);
@@ -87,6 +73,5 @@
 
         private Label label9;
         private DataGridView dataGridView1;
-        private Button button2;
     }
 }

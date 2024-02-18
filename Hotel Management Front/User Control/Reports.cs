@@ -1,4 +1,6 @@
-﻿namespace Hotel_System_Front.User_Control
+﻿using Plotly.NET;
+
+namespace Hotel_System_Front.User_Control
 {
     public partial class Reports : UserControl
     {
@@ -11,16 +13,38 @@
         }
         private void UC_Feedback_Load(object sender, EventArgs e)
         {
-            //dataGridView1.DataSource = _informationReport.Report(DateTime.Now.Month);
+            try
+            {
+                dataGridView1.DataSource = _informationReport.Report(DateTime.Now.Month);
 
-            //Dictionary<string, float> insights = _informationReport.Insights(DateTime.Now.Month);
-            //totalLb.Text = insights["Total Income"].ToString();
-            //actualLb.Text = insights["Actual Income"].ToString();
-            //outLb.Text = insights["Out Income"].ToString();
+                Dictionary<string, float> insights = _informationReport.Insights(DateTime.Now.Month);
+                totalLb.Text = insights["Total Income"].ToString();
+                actualLb.Text = insights["Actual Income"].ToString();
+                outLb.Text = insights["Out Income"].ToString();
 
-            //var customerCat = _informationReport.ClientsCategory();
-            //var topTen = _informationReport.TopRooms(10);
-            //var lastTen = _informationReport.LastRooms(10);
+                var customerCat = _informationReport.ClientsCategory();
+                var topTen = _informationReport.TopRooms(10);
+                var lastTen = _informationReport.LastRooms(10);
+
+                List<string> members = new List<string>();
+                List<int> clients = new List<int>();
+
+                foreach (var member in customerCat)
+                {
+                    members.Add(member.MemberShipName);
+                    clients.Add(member.ClientsNumber);
+                }
+
+                Chart2D.Chart.Column<string, int, string, string, string>(members, clients).Show();
+
+                Chart2D.Chart.Column<int, int, string, string, string>(topTen).Show();
+                Chart2D.Chart.Column<int, int, string, string, string>(lastTen).Show();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+
+            }
 
 
         }

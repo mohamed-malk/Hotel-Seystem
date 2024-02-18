@@ -220,6 +220,7 @@
             Name = "EmployeeForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Employee";
+            Load += EmployeeForm_Load;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();

@@ -1,73 +1,56 @@
-﻿using Hotel_System_Back.Models;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Net;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
-
-namespace Hotel_System_Front.User_Control
+﻿namespace Hotel_System_Front.User_Control
 {
     public partial class UC_Rooms : UserControl
     {
+        private readonly RoomRepo _roomRepo;
         public UC_Rooms()
         {
             InitializeComponent();
-            comboBox2.Items.Add("True");
-            comboBox2.Items.Add("False");
-            comboBox1.Items.Add("Single");
-            comboBox1.Items.Add("Double");
-            comboBox1.Items.Add("Trible");
+            _roomRepo = new RoomRepo();
         }
-        RoomRepo room = new RoomRepo();
+        private List<RoomType> GetTypes() =>
+        [
+            RoomType.Single, RoomType.Double,
+                RoomType.Triple
+        ];
+        private void LoadData() =>
+            dataGridView1.DataSource = _roomRepo.GetRoomList();
         private void button1_Click(object sender, EventArgs e)
         {
-            //  int id = itextBox1.Text();
-            //    int Id =
-            RoomType type;
-            int Number = int.Parse(textBox1.Text);
-            int Rate = int.Parse(textBox2.Text);
-
-            
-            if(comboBox1.Text == "Single")
+            try
             {
-                type = RoomType.Single;
+                _roomRepo.Add(new Room
+                {
+                    Number = int.Parse(numTxt.Text),
+                    IsAvailable = true,
+                    Type = (RoomType)typeRm.SelectedValue!,
+                    Rate = int.Parse(rateTxt.Text)
+                });
 
+                LoadData();
             }
-            else if(comboBox1.Text == "Double") 
+            catch (Exception exception)
             {
-                type = RoomType.Double;
+                MessageBox.Show(exception.Message);
             }
+        }
 
-            else
+        private void numTxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UC_Rooms_Load(object sender, EventArgs e)
+        {
+            try
             {
-                type = RoomType.Triple;
+                typeRm.DataSource = GetTypes();
+                LoadData();
             }
-
-          //  RoomType type2 = (RoomType)Enum.Parse(typeof(RoomType), type);
-            
-           
-            bool IsAvailable = comboBox2.Text == "False" ? false : true;
-            Room r = new Room()
+            catch (Exception exception)
             {
-                Number = Number,
-                Rate = Rate,
-                Type = type,
-                IsAvailable = IsAvailable
-                
-            };
-            room.Add(r); ;
-            //ClientRepo ClientRepo = new ClientRepo();
-
-            dataGridView1.DataSource = new List<Room> { r };
+                MessageBox.Show(exception.Message);
+            }
         }
     }
 

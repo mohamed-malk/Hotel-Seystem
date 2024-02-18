@@ -10,8 +10,15 @@ namespace Hotel_System_Front
             InitializeComponent();
             _employee = employee;
 
-            UC_Dasboard db = new UC_Dasboard(_employee);
-            addUserControl(db);
+            try
+            {
+                UC_Dasboard db = new UC_Dasboard(_employee);
+                addUserControl(db);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
         }
 
         private void addUserControl(UserControl userControl)
@@ -22,55 +29,103 @@ namespace Hotel_System_Front
             userControl.BringToFront();
 
         }
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Uc_Categories uc = new Uc_Categories();
-            addUserControl(uc);
-
-        }
         private void button2_Click(object sender, EventArgs e)
         {
-            UC_Rooms uc = new UC_Rooms();
-            addUserControl(uc);
+            try
+            {
+                UC_Rooms uc = new UC_Rooms();
+                addUserControl(uc);
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            UC_Clients uc = new UC_Clients();
-            addUserControl(uc);
+            try
+            {
+                UC_EmployeeClient uc = new UC_EmployeeClient(_employee.Id);
+                addUserControl(uc);
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            UC_Users uc = new UC_Users();
-            addUserControl(uc);
+            try
+            {
+                UC_Users uc = new UC_Users();
+                addUserControl(uc);
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Uc_Reservation uc = new Uc_Reservation();
-            addUserControl(uc);
+            try
+            {
+                Uc_Reservation uc = new Uc_Reservation();
+                addUserControl(uc);
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            Reports uc = new Reports();
-            addUserControl(uc);
+            try
+            {
+                Reports uc = new Reports();
+                addUserControl(uc);
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
 
         }
         private void button7_Click(object sender, EventArgs e)
         {
-            UC_Dasboard uc = new UC_Dasboard(_employee);
-            addUserControl(uc);
+            try
+            {
+                UC_Dasboard uc = new UC_Dasboard(_employee);
+                addUserControl(uc);
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
 
         }
 
         private void label7_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Login secondForm = new Login();
-            secondForm.ShowDialog();
-            this.Show();
+            try
+            {
+                this.Hide();
+                Login secondForm = new Login();
+                secondForm.ShowDialog();
+                //this.Show();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
+        }
+        protected override void OnClosed(EventArgs e)
+        {
+            base.OnClosed(e);
+            Application.Exit();
         }
     }
 }

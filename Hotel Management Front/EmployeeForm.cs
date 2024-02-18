@@ -1,4 +1,5 @@
-﻿using Hotel_System_Front.User_Control;
+﻿using Hotel_System_Back.Models;
+using Hotel_System_Front.User_Control;
 
 namespace Hotel_System_Front
 {
@@ -8,9 +9,17 @@ namespace Hotel_System_Front
         public EmployeeForm(Employee employee)
         {
             InitializeComponent();
-            _employee = employee;
-            UC_EmployeeProfile uc = new UC_EmployeeProfile(_employee);
-            addUserControl(uc);
+            try
+            {
+                _employee = employee;
+                UC_EmployeeProfile uc = new UC_EmployeeProfile(_employee);
+                addUserControl(uc);
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+
+            }
         }
         private void addUserControl(UserControl userControl)
         {
@@ -23,36 +32,71 @@ namespace Hotel_System_Front
 
         private void button1_Click(object sender, EventArgs e)
         {
-            UC_EmployeeProfile uc = new UC_EmployeeProfile(_employee);
-            addUserControl(uc);
+            try
+            {
+                UC_EmployeeProfile uc = new UC_EmployeeProfile(_employee);
+                addUserControl(uc);
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
 
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            UC_EmployeeRooms uc = new UC_EmployeeRooms();
-            addUserControl(uc);
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            UC_EmployeeClient uc = new UC_EmployeeClient();
-            addUserControl(uc);
+            try
+            {
+                UC_EmployeeClient uc = new UC_EmployeeClient(_employee.Id);
+                addUserControl(uc);
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            UC_EmployeeReservation uc = new UC_EmployeeReservation();
-            addUserControl(uc);
+            try
+            {
+                UC_EmployeeReservation uc = new UC_EmployeeReservation();
+                addUserControl(uc);
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
 
+            }
         }
 
         private void label7_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Login secondForm = new Login();
-            secondForm.ShowDialog();
-            this.Show();
+            try
+            {
+                this.Hide();
+                Login secondForm = new Login();
+                secondForm.ShowDialog();
+                //this.Show();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+
+            }
+        }
+
+        protected override void OnClosed(EventArgs e)
+        {
+            base.OnClosed(e);
+            Application.Exit();
+        }
+
+        private void EmployeeForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

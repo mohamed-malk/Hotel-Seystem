@@ -12,7 +12,7 @@ namespace Hotel_System_Front
             // see https://aka.ms/applicationconfiguration.
 
             ApplicationConfiguration.Initialize();
-            Application.Run(new main(new Employee(){Id = 1}));
+            Application.Run(new Login());
         }
     }
 }

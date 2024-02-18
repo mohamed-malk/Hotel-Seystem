@@ -85,13 +85,23 @@ namespace Hotel_System_Front
 
                 this.Close(); this.Hide();
                 secondForm.ShowDialog();
-                this.Show();
+                //this.Show();
             }
-              
+
         }
 
         private void Email_TextChanged(object sender, EventArgs e)
-        { 
+        {
+
+        }
+
+        protected override void OnClosed(EventArgs e)
+        {
+            base.OnClosed(e);
+            Application.Exit();
+        }
+        private void Register_Load(object sender, EventArgs e)
+        {
 
         }
     }

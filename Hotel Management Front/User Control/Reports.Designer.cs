@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             label9 = new Label();
-            dataGridView1 = new DataGridView();
-            label1 = new Label();
-            totalLb = new Label();
-            actualLb = new Label();
-            label3 = new Label();
             outLb = new Label();
             label5 = new Label();
+            actualLb = new Label();
+            label3 = new Label();
+            totalLb = new Label();
+            label1 = new Label();
+            dataGridView1 = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -49,35 +49,25 @@
             label9.TabIndex = 33;
             label9.Text = "Reports";
             // 
-            // dataGridView1
+            // outLb
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(136, 161);
             dataGridView1.Margin = new Padding(3, 4, 3, 4);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(955, 204);
+            dataGridView1.Size = new Size(889, 236);
             dataGridView1.TabIndex = 34;
             // 
-            // label1
+            // label5
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Myanmar Text", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label1.Location = new Point(51, 454);
-            label1.Name = "label1";
-            label1.Size = new Size(207, 53);
-            label1.TabIndex = 35;
-            label1.Text = "Total Income";
-            // 
-            // totalLb
-            // 
-            totalLb.AutoSize = true;
-            totalLb.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point, 161);
-            totalLb.Location = new Point(292, 454);
-            totalLb.Name = "totalLb";
-            totalLb.Size = new Size(87, 36);
-            totalLb.TabIndex = 36;
-            totalLb.Text = "1000";
+            label5.AutoSize = true;
+            label5.Font = new Font("Myanmar Text", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label5.Location = new Point(51, 644);
+            label5.Name = "label5";
+            label5.Size = new Size(187, 53);
+            label5.TabIndex = 39;
+            label5.Text = "Out Income";
             // 
             // actualLb
             // 
@@ -99,25 +89,35 @@
             label3.TabIndex = 37;
             label3.Text = "Actual Income";
             // 
-            // outLb
+            // totalLb
             // 
-            outLb.AutoSize = true;
-            outLb.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point, 161);
-            outLb.Location = new Point(292, 644);
-            outLb.Name = "outLb";
-            outLb.Size = new Size(87, 36);
-            outLb.TabIndex = 40;
-            outLb.Text = "1000";
+            totalLb.AutoSize = true;
+            totalLb.Font = new Font("Segoe UI Variable Text", 18F, FontStyle.Bold, GraphicsUnit.Point, 161);
+            totalLb.Location = new Point(292, 454);
+            totalLb.Name = "totalLb";
+            totalLb.Size = new Size(81, 40);
+            totalLb.TabIndex = 36;
+            totalLb.Text = "1000";
             // 
-            // label5
+            // label1
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Myanmar Text", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label5.Location = new Point(51, 644);
-            label5.Name = "label5";
-            label5.Size = new Size(187, 53);
-            label5.TabIndex = 39;
-            label5.Text = "Out Income";
+            label1.AutoSize = true;
+            label1.Font = new Font("Myanmar Text", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label1.Location = new Point(51, 454);
+            label1.Name = "label1";
+            label1.Size = new Size(207, 53);
+            label1.TabIndex = 35;
+            label1.Text = "Total Income";
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(126, 173);
+            dataGridView1.Margin = new Padding(3, 4, 3, 4);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(889, 236);
+            dataGridView1.TabIndex = 34;
             // 
             // Reports
             // 
@@ -144,12 +144,12 @@
         #endregion
 
         private Label label9;
-        private DataGridView dataGridView1;
-        private Label label1;
-        private Label totalLb;
-        private Label actualLb;
-        private Label label3;
         private Label outLb;
         private Label label5;
+        private Label actualLb;
+        private Label label3;
+        private Label totalLb;
+        private Label label1;
+        private DataGridView dataGridView1;
     }
 }

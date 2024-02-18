@@ -78,6 +78,7 @@
             button1.TabIndex = 54;
             button1.Text = "Update";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // button2
             // 

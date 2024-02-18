@@ -1,6 +1,4 @@
-﻿using Hotel_System_Back.Services;
-
-namespace Hotel_System_Front.User_Control
+﻿namespace Hotel_System_Front.User_Control
 {
     public partial class UC_EmployeeProfile : UserControl
     {
@@ -20,20 +18,21 @@ namespace Hotel_System_Front.User_Control
         {
             EmployeeView employeeView = _employeeRepo.GetByIdView(_employee.Id)!.Value;
             
-            
             dataGridView1.DataSource = new List<EmployeeView>
                 {  employeeView};
         }
 
         private void UC_EmployeeProfile_Load(object sender, EventArgs e)
         {
-            UpdateView();
-        }
+            try
+            {
+                UpdateView();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            _employeeRepo.Update(_employee);
-            UpdateView();
+            }
         }
     }
 }

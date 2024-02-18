@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             textBox2 = new TextBox();
-            button4 = new Button();
-            update = new Button();
             button1 = new Button();
             dataGridView1 = new DataGridView();
             textBox1 = new TextBox();
@@ -42,7 +40,7 @@
             textBox7 = new TextBox();
             textBox8 = new TextBox();
             textBox10 = new TextBox();
-            comboBox1 = new ComboBox();
+            gender = new RadioButton();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -56,35 +54,13 @@
             textBox2.Size = new Size(151, 37);
             textBox2.TabIndex = 70;
             // 
-            // button4
-            // 
-            button4.BackColor = Color.FromArgb(103, 177, 198);
-            button4.Location = new Point(827, 376);
-            button4.Margin = new Padding(3, 4, 3, 4);
-            button4.Name = "button4";
-            button4.Size = new Size(103, 45);
-            button4.TabIndex = 69;
-            button4.Text = "Delete";
-            button4.UseVisualStyleBackColor = false;
-            // 
-            // update
-            // 
-            update.BackColor = Color.FromArgb(103, 177, 198);
-            update.Location = new Point(551, 376);
-            update.Margin = new Padding(3, 4, 3, 4);
-            update.Name = "update";
-            update.Size = new Size(103, 45);
-            update.TabIndex = 68;
-            update.Text = "Update";
-            update.UseVisualStyleBackColor = false;
-            // 
             // button1
             // 
             button1.BackColor = Color.FromArgb(103, 177, 198);
-            button1.Location = new Point(272, 376);
+            button1.Location = new Point(462, 358);
             button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
-            button1.Size = new Size(103, 45);
+            button1.Size = new Size(208, 45);
             button1.TabIndex = 66;
             button1.Text = "Add";
             button1.UseVisualStyleBackColor = false;
@@ -101,6 +77,7 @@
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(850, 203);
             dataGridView1.TabIndex = 65;
+            dataGridView1.CellClick += dataGridView1_CellClick;
             // 
             // textBox1
             // 
@@ -175,7 +152,7 @@
             // 
             // textBox8
             // 
-            textBox8.Location = new Point(176, 119);
+            textBox8.Location = new Point(319, 263);
             textBox8.Margin = new Padding(3, 4, 3, 4);
             textBox8.Name = "textBox8";
             textBox8.PlaceholderText = "Age";
@@ -184,21 +161,23 @@
             // 
             // textBox10
             // 
-            textBox10.Location = new Point(589, 119);
+            textBox10.Location = new Point(758, 263);
             textBox10.Margin = new Padding(3, 4, 3, 4);
             textBox10.Name = "textBox10";
             textBox10.PlaceholderText = "Attend";
             textBox10.Size = new Size(155, 27);
             textBox10.TabIndex = 79;
             // 
-            // comboBox1
+            // gender
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(392, 119);
-            comboBox1.Margin = new Padding(3, 4, 3, 4);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(138, 28);
-            comboBox1.TabIndex = 80;
+            gender.AutoSize = true;
+            gender.Location = new Point(551, 266);
+            gender.Name = "gender";
+            gender.Size = new Size(63, 24);
+            gender.TabIndex = 80;
+            gender.TabStop = true;
+            gender.Text = "Male";
+            gender.UseVisualStyleBackColor = true;
             // 
             // UC_Users
             // 
@@ -206,7 +185,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(224, 224, 224);
             BackgroundImageLayout = ImageLayout.Stretch;
-            Controls.Add(comboBox1);
+            Controls.Add(gender);
             Controls.Add(textBox10);
             Controls.Add(textBox8);
             Controls.Add(textBox7);
@@ -215,8 +194,6 @@
             Controls.Add(textBox4);
             Controls.Add(textBox3);
             Controls.Add(textBox2);
-            Controls.Add(button4);
-            Controls.Add(update);
             Controls.Add(button1);
             Controls.Add(dataGridView1);
             Controls.Add(textBox1);
@@ -224,6 +201,7 @@
             Margin = new Padding(3, 4, 3, 4);
             Name = "UC_Users";
             Size = new Size(1253, 851);
+            Load += UC_Users_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -231,8 +209,6 @@
 
         #endregion
         private TextBox textBox2;
-        private Button button4;
-        private Button update;
         private Button button1;
         private DataGridView dataGridView1;
         private TextBox textBox1;
@@ -244,6 +220,6 @@
         private TextBox textBox7;
         private TextBox textBox8;
         private TextBox textBox10;
-        private ComboBox comboBox1;
+        private RadioButton gender;
     }
 }
