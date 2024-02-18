@@ -14,7 +14,7 @@ namespace Hotel_System_Front.User_Control
     public partial class Uc_Reservation : UserControl
     {
         ReservationRepo reserve = new ReservationRepo();
-        RoomRepo RoomReserve = new RoomRepo(); 
+        RoomRepo RoomReserve = new RoomRepo();
         ClientRepo ClientRepo = new ClientRepo();
         public Uc_Reservation()
         {
@@ -37,7 +37,7 @@ namespace Hotel_System_Front.User_Control
             catch (Exception exception)
             {
                 MessageBox.Show(exception.Message);
-                
+
             }
 
         }
@@ -70,6 +70,11 @@ namespace Hotel_System_Front.User_Control
                 MessageBox.Show(exception.Message);
 
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

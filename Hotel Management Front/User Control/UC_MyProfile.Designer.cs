@@ -31,17 +31,14 @@
             label9 = new Label();
             dataGridView1 = new DataGridView();
             button1 = new Button();
-            button2 = new Button();
             name = new TextBox();
             password = new TextBox();
-            address = new TextBox();
-            phone = new TextBox();
             nationality = new TextBox();
             label1 = new Label();
             label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
             label5 = new Label();
+            label3 = new Label();
+            ageTxt = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -57,11 +54,14 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.BackgroundColor = SystemColors.Control;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(468, 226);
             dataGridView1.Margin = new Padding(3, 4, 3, 4);
             dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(723, 257);
             dataGridView1.TabIndex = 53;
@@ -71,7 +71,7 @@
             // 
             button1.BackColor = Color.FromArgb(103, 177, 198);
             button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(527, 518);
+            button1.Location = new Point(758, 536);
             button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
             button1.Size = new Size(103, 45);
@@ -80,21 +80,9 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
-            // button2
-            // 
-            button2.BackColor = Color.FromArgb(103, 177, 198);
-            button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.Location = new Point(893, 518);
-            button2.Margin = new Padding(3, 4, 3, 4);
-            button2.Name = "button2";
-            button2.Size = new Size(103, 45);
-            button2.TabIndex = 55;
-            button2.Text = "Save";
-            button2.UseVisualStyleBackColor = false;
-            // 
             // name
             // 
-            name.Location = new Point(158, 219);
+            name.Location = new Point(140, 219);
             name.Margin = new Padding(3, 4, 3, 4);
             name.Name = "name";
             name.Size = new Size(259, 27);
@@ -108,25 +96,9 @@
             password.Size = new Size(270, 27);
             password.TabIndex = 57;
             // 
-            // address
-            // 
-            address.Location = new Point(147, 378);
-            address.Margin = new Padding(3, 4, 3, 4);
-            address.Name = "address";
-            address.Size = new Size(270, 27);
-            address.TabIndex = 58;
-            // 
-            // phone
-            // 
-            phone.Location = new Point(147, 465);
-            phone.Margin = new Padding(3, 4, 3, 4);
-            phone.Name = "phone";
-            phone.Size = new Size(270, 27);
-            phone.TabIndex = 59;
-            // 
             // nationality
             // 
-            nationality.Location = new Point(147, 554);
+            nationality.Location = new Point(140, 422);
             nationality.Margin = new Padding(3, 4, 3, 4);
             nationality.Name = "nationality";
             nationality.Size = new Size(277, 27);
@@ -146,41 +118,39 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(68, 298);
+            label2.Location = new Point(51, 295);
             label2.Name = "label2";
             label2.Size = new Size(76, 20);
             label2.TabIndex = 62;
             label2.Text = "Password";
             // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(72, 382);
-            label3.Name = "label3";
-            label3.Size = new Size(66, 20);
-            label3.TabIndex = 63;
-            label3.Text = "Address";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(74, 469);
-            label4.Name = "label4";
-            label4.Size = new Size(53, 20);
-            label4.TabIndex = 64;
-            label4.Text = "Phone";
-            // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(47, 561);
+            label5.Location = new Point(40, 429);
             label5.Name = "label5";
             label5.Size = new Size(87, 20);
             label5.TabIndex = 65;
             label5.Text = "Nationality";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Location = new Point(44, 362);
+            label3.Name = "label3";
+            label3.Size = new Size(37, 20);
+            label3.TabIndex = 67;
+            label3.Text = "Age";
+            // 
+            // ageTxt
+            // 
+            ageTxt.Location = new Point(140, 359);
+            ageTxt.Margin = new Padding(3, 4, 3, 4);
+            ageTxt.Name = "ageTxt";
+            ageTxt.Size = new Size(270, 27);
+            ageTxt.TabIndex = 66;
             // 
             // UC_MyProfile
             // 
@@ -188,17 +158,14 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(224, 224, 224);
             BackgroundImageLayout = ImageLayout.Stretch;
-            Controls.Add(label5);
-            Controls.Add(label4);
             Controls.Add(label3);
+            Controls.Add(ageTxt);
+            Controls.Add(label5);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(nationality);
-            Controls.Add(phone);
-            Controls.Add(address);
             Controls.Add(password);
             Controls.Add(name);
-            Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(dataGridView1);
             Controls.Add(label9);
@@ -216,16 +183,13 @@
         private Label label9;
         private DataGridView dataGridView1;
         private Button button1;
-        private Button button2;
         private TextBox name;
         private TextBox password;
-        private TextBox address;
-        private TextBox phone;
         private TextBox nationality;
         private Label label1;
         private Label label2;
-        private Label label3;
-        private Label label4;
         private Label label5;
+        private Label label3;
+        private TextBox ageTxt;
     }
 }

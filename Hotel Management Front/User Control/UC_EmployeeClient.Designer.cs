@@ -118,7 +118,7 @@
             // 
             dataGridView1.BackgroundColor = Color.FromArgb(224, 224, 224);
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(141, 498);
+            dataGridView1.Location = new Point(139, 465);
             dataGridView1.Margin = new Padding(3, 4, 3, 4);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
@@ -160,7 +160,7 @@
             // button1
             // 
             button1.BackColor = Color.FromArgb(103, 177, 198);
-            button1.Location = new Point(455, 405);
+            button1.Location = new Point(443, 324);
             button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
             button1.Size = new Size(378, 45);
@@ -172,7 +172,7 @@
             // gender
             // 
             gender.AutoSize = true;
-            gender.Location = new Point(644, 237);
+            gender.Location = new Point(1020, 237);
             gender.Name = "gender";
             gender.Size = new Size(63, 24);
             gender.TabIndex = 98;
@@ -185,6 +185,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
+            Controls.Add(gender);
             Controls.Add(Nationality);
             Controls.Add(Age);
             Controls.Add(address);

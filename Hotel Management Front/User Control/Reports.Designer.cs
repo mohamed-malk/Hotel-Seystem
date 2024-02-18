@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             label9 = new Label();
-            outLb = new Label();
             label5 = new Label();
             actualLb = new Label();
             label3 = new Label();
             totalLb = new Label();
             label1 = new Label();
             dataGridView1 = new DataGridView();
+            outLb = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -48,16 +48,6 @@
             label9.Size = new Size(195, 54);
             label9.TabIndex = 33;
             label9.Text = "Reports";
-            // 
-            // outLb
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(136, 161);
-            dataGridView1.Margin = new Padding(3, 4, 3, 4);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(889, 236);
-            dataGridView1.TabIndex = 34;
             // 
             // label5
             // 
@@ -119,6 +109,16 @@
             dataGridView1.Size = new Size(889, 236);
             dataGridView1.TabIndex = 34;
             // 
+            // outLb
+            // 
+            outLb.AutoSize = true;
+            outLb.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point, 161);
+            outLb.Location = new Point(292, 646);
+            outLb.Name = "outLb";
+            outLb.Size = new Size(87, 36);
+            outLb.TabIndex = 40;
+            outLb.Text = "1000";
+            // 
             // Reports
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -144,12 +144,12 @@
         #endregion
 
         private Label label9;
-        private Label outLb;
         private Label label5;
         private Label actualLb;
         private Label label3;
         private Label totalLb;
         private Label label1;
         private DataGridView dataGridView1;
+        private Label outLb;
     }
 }

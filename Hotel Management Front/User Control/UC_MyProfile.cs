@@ -27,17 +27,39 @@ namespace Hotel_System_Front.User_Control
             dataGridView1.DataSource =
         new List<Client> { _currentClient };
 
+        private void FillNull()
+        {
+            password.Text = password.Text.Length == 0 ? 
+                _currentClient.Password : password.Text;
+
+            ageTxt.Text = ageTxt.Text.Length == 0 ?
+                _currentClient.Age.ToString() : ageTxt.Text;
+
+            name.Text = name.Text.Length == 0 ?
+                _currentClient.Name : name.Text;
+
+            nationality.Text = nationality.Text.Length == 0 ?
+                _currentClient.Nationality : nationality.Text;
+        }
         private void button1_Click(object sender, EventArgs e)
         {
-            _currentRepo.Update(_currentClient.Id, new Dictionary<PropertiesNames, object>
+            try
             {
-                [PropertiesNames.Address] = address.Text,
-                [PropertiesNames.Password] = password.Text,
-                [PropertiesNames.Name] = name.Text,
-                [PropertiesNames.Nationality] = nationality.Text
-            }); 
-            dataGridView1.DataSource =
-                new List<Client> { _currentClient };
+                FillNull();
+                _currentClient = _currentRepo.Update(_currentClient.Id, new Dictionary<PropertiesNames, object>
+                {
+                    [PropertiesNames.Age] = int.Parse(ageTxt.Text),
+                    [PropertiesNames.Password] = password.Text,
+                    [PropertiesNames.Name] = name.Text,
+                    [PropertiesNames.Nationality] = nationality.Text
+                });
+                dataGridView1.DataSource =
+                    new List<Client> { _currentClient };
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
         }
     }
 }

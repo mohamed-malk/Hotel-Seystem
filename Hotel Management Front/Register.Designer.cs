@@ -53,6 +53,7 @@
             errorProvider4 = new ErrorProvider(components);
             errorProvider5 = new ErrorProvider(components);
             NationalId = new TextBox();
+            errorProvider1 = new ErrorProvider(components);
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -64,6 +65,7 @@
             ((System.ComponentModel.ISupportInitialize)errorProvider3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)errorProvider4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)errorProvider5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -306,6 +308,10 @@
             NationalId.Size = new Size(319, 27);
             NationalId.TabIndex = 33;
             // 
+            // errorProvider1
+            // 
+            errorProvider1.ContainerControl = this;
+            // 
             // Register
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -347,6 +353,7 @@
             ((System.ComponentModel.ISupportInitialize)errorProvider3).EndInit();
             ((System.ComponentModel.ISupportInitialize)errorProvider4).EndInit();
             ((System.ComponentModel.ISupportInitialize)errorProvider5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -380,5 +387,6 @@
         private TextBox NationalId;
         private Label label1;
         private Label label2;
+        private ErrorProvider errorProvider1;
     }
 }

@@ -190,11 +190,7 @@ public List<ClientView> GetByAddress(string address)
         Dictionary<Properties, object> newValues)
     {
         // pass the basic Properties as Person
-        Dictionary<Properties, object> perValues = newValues;
-        perValues.Remove(Properties.MemberShipId);
-        perValues.Remove(Properties.Nationality);
-        perValues.Remove(Properties.Points);
-        Client client = (Client)base.Update(id, perValues);
+        Client client = (Client)base.Update(id, newValues);
 
 
         // update other

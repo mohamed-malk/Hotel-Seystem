@@ -35,7 +35,7 @@ namespace Hotel_System_Front.User_Control
                     clients.Add(member.ClientsNumber);
                 }
 
-                Chart2D.Chart.Column<string, int, string, string, string>(members, clients).Show();
+                Chart2D.Chart.Column<int, string, string, string, string>(clients, members).Show();
 
                 Chart2D.Chart.Column<int, int, string, string, string>(topTen).Show();
                 Chart2D.Chart.Column<int, int, string, string, string>(lastTen).Show();
@@ -43,10 +43,7 @@ namespace Hotel_System_Front.User_Control
             catch (Exception exception)
             {
                 MessageBox.Show(exception.Message);
-
             }
-
-
         }
     }
 }

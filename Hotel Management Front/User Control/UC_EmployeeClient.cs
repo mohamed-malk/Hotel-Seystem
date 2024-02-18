@@ -9,7 +9,7 @@
         public UC_EmployeeClient(int empId)
         {
             InitializeComponent();
-            _clientRepo = new ClientRepo(); 
+            _clientRepo = new ClientRepo();
             _empId = empId;
         }
 
@@ -135,6 +135,11 @@
             {
                 MessageBox.Show(@"You are not allowed to delete or edit Clients");
             }
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

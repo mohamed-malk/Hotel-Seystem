@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Hotel_System_Back.Models.Client">
+    <Position X="1.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAABAgAAAEIBAIAAAAABAAAAAAAAAIACACAA=</HashCode>
+      <FileName>Models\Client.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hotel_System_Back.Models.CommonTable">
+    <Position X="9.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Models\CommonTable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hotel_System_Back.Models.Employee">
+    <Position X="5.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAACAAAAAQAAAAAAAIIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Employee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hotel_System_Back.Models.Exceptions">
+    <Position X="13.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAIAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Exceptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hotel_System_Back.Models.ExtendClass">
+    <Position X="15" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAAAABAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ExtendedFunctions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hotel_System_Back.Models.Person">
+    <Position X="3.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQCAAAAACAAAACAAEAAIAQAAAAAAAACAQAAAAAAAAI=</HashCode>
+      <FileName>Models\ExtendedPerson.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hotel_System_Back.Models.HotelDbContext">
+    <Position X="12.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAYBAAAAAEiAAAAACGAAAAAAAAAAAAAiBAAA=</HashCode>
+      <FileName>Models\ExtendHotelDbContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hotel_System_Back.Models.FeedBack">
+    <Position X="7.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAACAAAAAAAgAAAAgAAAAAAAAAEAAAABAAAAAAAAAAQ=</HashCode>
+      <FileName>Models\FeedBack.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hotel_System_Back.Models.MemberShip" Collapsed="true">
+    <Position X="11" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAAAAAAAAQAAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\MemberShips.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hotel_System_Back.Models.Vip" Collapsed="true">
+    <Position X="11" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\MemberShips.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hotel_System_Back.Models.Advanced" Collapsed="true">
+    <Position X="12.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\MemberShips.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hotel_System_Back.Models.Normal" Collapsed="true">
+    <Position X="9.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\MemberShips.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hotel_System_Back.Models.Payment">
+    <Position X="9.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAABAAgAAAAACAACAAAAABAAAAAAAAAAQ=</HashCode>
+      <FileName>Models\Payment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hotel_System_Back.Models.Reservation">
+    <Position X="3.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACgAAAAAAAgJAAAAAACAAAABIAAAAAAAAAAEQ=</HashCode>
+      <FileName>Models\Reservation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hotel_System_Back.Models.Room">
+    <Position X="2" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAACAAAAAQAAAAAAEEAAAAAAAAAAAAAAAQAAAIAAAAA=</HashCode>
+      <FileName>Models\Room.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hotel_System_Back.Models.TransactionTable">
+    <Position X="10.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAAAAAAIAAAACAAABABAAAAAAAAAAA=</HashCode>
+      <FileName>Models\TransactionTable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Hotel_System_Back.Models.Advantages">
+    <Position X="13.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAACAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Models\MemberShips.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Hotel_System_Back.Models.RoomType">
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAACAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Models\Room.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -17,9 +17,9 @@
         private void UpdateView()
         {
             EmployeeView employeeView = _employeeRepo.GetByIdView(_employee.Id)!.Value;
-            
+
             dataGridView1.DataSource = new List<EmployeeView>
-                {  employeeView};
+                { employeeView };
         }
 
         private void UC_EmployeeProfile_Load(object sender, EventArgs e)

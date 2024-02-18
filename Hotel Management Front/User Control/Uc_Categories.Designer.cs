@@ -53,7 +53,7 @@
             button1.Location = new Point(275, 276);
             button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
-            button1.Size = new Size(103, 45);
+            button1.Size = new Size(431, 45);
             button1.TabIndex = 54;
             button1.Text = "Add";
             button1.UseVisualStyleBackColor = false;

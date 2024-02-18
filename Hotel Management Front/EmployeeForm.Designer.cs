@@ -95,6 +95,7 @@
             // 
             // pictureBox7
             // 
+            pictureBox7.BackColor = Color.White;
             pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
             pictureBox7.Location = new Point(1087, 17);
             pictureBox7.Margin = new Padding(3, 4, 3, 4);
@@ -107,7 +108,7 @@
             // pictureBox9
             // 
             pictureBox9.Image = Properties.Resources.customers;
-            pictureBox9.Location = new Point(11, 338);
+            pictureBox9.Location = new Point(7, 442);
             pictureBox9.Margin = new Padding(3, 4, 3, 4);
             pictureBox9.Name = "pictureBox9";
             pictureBox9.Size = new Size(61, 72);
@@ -118,7 +119,7 @@
             // pictureBox5
             // 
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(-1, 582);
+            pictureBox5.Location = new Point(-1, 680);
             pictureBox5.Margin = new Padding(3, 4, 3, 4);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(57, 67);
@@ -138,7 +139,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(12, 201);
+            pictureBox1.Location = new Point(12, 227);
             pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(56, 61);
@@ -154,7 +155,7 @@
             button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(103, 177, 198);
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI", 20.25F);
-            button1.Location = new Point(90, 187);
+            button1.Location = new Point(107, 213);
             button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
             button1.Size = new Size(141, 75);
@@ -172,7 +173,7 @@
             button3.FlatAppearance.MouseOverBackColor = Color.FromArgb(103, 177, 198);
             button3.FlatStyle = FlatStyle.Flat;
             button3.Font = new Font("Segoe UI", 20.25F);
-            button3.Location = new Point(90, 338);
+            button3.Location = new Point(96, 442);
             button3.Margin = new Padding(3, 4, 3, 4);
             button3.Name = "button3";
             button3.Size = new Size(171, 83);
@@ -190,7 +191,7 @@
             button4.FlatAppearance.MouseOverBackColor = Color.FromArgb(103, 177, 198);
             button4.FlatStyle = FlatStyle.Flat;
             button4.Font = new Font("Segoe UI", 20.25F);
-            button4.Location = new Point(78, 582);
+            button4.Location = new Point(72, 680);
             button4.Margin = new Padding(3, 4, 3, 4);
             button4.Name = "button4";
             button4.Size = new Size(195, 80);
@@ -204,7 +205,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
+            BackColor = Color.FromArgb(103, 177, 195);
             ClientSize = new Size(1247, 935);
             Controls.Add(button4);
             Controls.Add(pictureBox1);

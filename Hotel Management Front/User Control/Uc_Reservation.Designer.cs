@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             dataGridView1 = new DataGridView();
-            button2 = new Button();
             button1 = new Button();
             textBox2 = new TextBox();
             dateTimePicker1 = new DateTimePicker();
@@ -49,17 +48,6 @@
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(689, 283);
             dataGridView1.TabIndex = 80;
-            // 
-            // button2
-            // 
-            button2.BackColor = Color.FromArgb(103, 177, 198);
-            button2.Location = new Point(564, 329);
-            button2.Margin = new Padding(3, 4, 3, 4);
-            button2.Name = "button2";
-            button2.Size = new Size(99, 45);
-            button2.TabIndex = 79;
-            button2.Text = "Cancel";
-            button2.UseVisualStyleBackColor = false;
             // 
             // button1
             // 
@@ -133,7 +121,6 @@
             BackColor = Color.White;
             Controls.Add(dateTimePicker2);
             Controls.Add(dataGridView1);
-            Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(textBox2);
             Controls.Add(dateTimePicker1);
@@ -152,7 +139,6 @@
         #endregion
 
         private DataGridView dataGridView1;
-        private Button button2;
         private Button button1;
         private TextBox textBox2;
         private DateTimePicker dateTimePicker1;

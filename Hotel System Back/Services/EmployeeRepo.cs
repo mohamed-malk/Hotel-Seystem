@@ -185,11 +185,7 @@ public class EmployeeRepo : PersonRepo
     public override Employee Update(int id, 
         Dictionary<Properties, object> newValues)
     {
-       
-        Dictionary<Properties, object> perValues = newValues;
-        perValues.Remove(Properties.Salary);
-        perValues.Remove(Properties.Attend);
-        Employee employee = (Employee)base.Update(id, perValues);
+        Employee employee = (Employee)base.Update(id, newValues);
 
         foreach (var item in newValues)
         {
