@@ -37,17 +37,17 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Font = new Font("Baskerville Old Face", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label9.Font = new Font("Microsoft Sans Serif", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label9.Location = new Point(421, 24);
             label9.Name = "label9";
-            label9.Size = new Size(230, 53);
+            label9.Size = new Size(240, 54);
             label9.TabIndex = 63;
             label9.Text = "My Profile";
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(129, 136);
+            dataGridView1.Location = new Point(190, 123);
             dataGridView1.Margin = new Padding(3, 4, 3, 4);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;

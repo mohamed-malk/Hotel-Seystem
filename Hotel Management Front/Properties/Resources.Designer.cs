@@ -113,6 +113,16 @@ namespace Hotel_System_Front.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Dn54en1XcAAIycj {
+            get {
+                object obj = ResourceManager.GetObject("Dn54en1XcAAIycj", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Hotel_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("Hotel-removebg-preview", resourceCulture);
@@ -226,6 +236,16 @@ namespace Hotel_System_Front.Properties {
         internal static System.Drawing.Bitmap WhatsApp_Image_2024_02_06_at_9_31_21_PM {
             get {
                 object obj = ResourceManager.GetObject("WhatsApp Image 2024-02-06 at 9.31.21 PM", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap خلفية_سماء_وكأنها_لقطة_جوية_من_فوق_السحب {
+            get {
+                object obj = ResourceManager.GetObject("خلفية-سماء-وكأنها-لقطة-جوية-من-فوق-السحب", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

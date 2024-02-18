@@ -60,8 +60,9 @@
             // 
             // pictureBox3
             // 
+            pictureBox3.BackColor = Color.White;
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(8, 553);
+            pictureBox3.Location = new Point(1, 730);
             pictureBox3.Margin = new Padding(3, 4, 3, 4);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(69, 67);
@@ -72,10 +73,11 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Font = new Font("Baskerville Old Face", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label8.Location = new Point(273, 59);
+            label8.Font = new Font("MV Boli", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label8.ForeColor = Color.White;
+            label8.Location = new Point(404, 55);
             label8.Name = "label8";
-            label8.Size = new Size(549, 53);
+            label8.Size = new Size(651, 62);
             label8.TabIndex = 49;
             label8.Text = "Hotel Management System";
             // 
@@ -104,19 +106,20 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 20.25F);
+            label7.Font = new Font("Palatino Linotype", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.White;
-            label7.Location = new Point(91, 15);
+            label7.Location = new Point(53, 15);
             label7.Name = "label7";
-            label7.Size = new Size(127, 46);
+            label7.Size = new Size(130, 46);
             label7.TabIndex = 14;
             label7.Text = "Logout";
             label7.Click += label7_Click;
             // 
             // pictureBox7
             // 
+            pictureBox7.BackColor = Color.White;
             pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(1087, 13);
+            pictureBox7.Location = new Point(1239, 0);
             pictureBox7.Margin = new Padding(3, 4, 3, 4);
             pictureBox7.Name = "pictureBox7";
             pictureBox7.Size = new Size(145, 135);
@@ -126,8 +129,9 @@
             // 
             // pictureBox6
             // 
+            pictureBox6.BackColor = Color.White;
             pictureBox6.Image = Properties.Resources.room;
-            pictureBox6.Location = new Point(16, 164);
+            pictureBox6.Location = new Point(16, 148);
             pictureBox6.Margin = new Padding(3, 4, 3, 4);
             pictureBox6.Name = "pictureBox6";
             pictureBox6.Size = new Size(53, 68);
@@ -138,7 +142,7 @@
             // pictureBox5
             // 
             pictureBox5.Image = Properties.Resources.booking;
-            pictureBox5.Location = new Point(13, 397);
+            pictureBox5.Location = new Point(1, 450);
             pictureBox5.Margin = new Padding(3, 4, 3, 4);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(57, 67);
@@ -148,6 +152,7 @@
             // 
             // pictureBox9
             // 
+            pictureBox9.BackColor = Color.White;
             pictureBox9.Image = Properties.Resources.customers;
             pictureBox9.Location = new Point(13, 245);
             pictureBox9.Margin = new Padding(3, 4, 3, 4);
@@ -160,7 +165,7 @@
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources.users5;
-            pictureBox2.Location = new Point(15, 324);
+            pictureBox2.Location = new Point(5, 340);
             pictureBox2.Margin = new Padding(3, 4, 3, 4);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(53, 61);
@@ -170,7 +175,7 @@
             // 
             // panelContainer
             // 
-            panelContainer.BackColor = Color.FromArgb(224, 224, 224);
+            panelContainer.BackColor = Color.White;
             panelContainer.Location = new Point(273, 160);
             panelContainer.Margin = new Padding(3, 4, 3, 4);
             panelContainer.Name = "panelContainer";
@@ -179,12 +184,12 @@
             // 
             // button2
             // 
-            button2.BackColor = Color.White;
+            button2.BackColor = Color.FromArgb(103, 177, 198);
             button2.FlatAppearance.BorderColor = Color.White;
             button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(103, 177, 198);
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Segoe UI", 20.25F);
-            button2.Location = new Point(75, 161);
+            button2.Location = new Point(78, 136);
             button2.Margin = new Padding(3, 4, 3, 4);
             button2.Name = "button2";
             button2.Size = new Size(195, 80);
@@ -196,7 +201,7 @@
             // 
             // button3
             // 
-            button3.BackColor = Color.White;
+            button3.BackColor = Color.FromArgb(103, 177, 198);
             button3.FlatAppearance.BorderColor = Color.White;
             button3.FlatAppearance.MouseOverBackColor = Color.FromArgb(103, 177, 198);
             button3.FlatStyle = FlatStyle.Flat;
@@ -213,12 +218,12 @@
             // 
             // button4
             // 
-            button4.BackColor = Color.White;
+            button4.BackColor = Color.FromArgb(103, 177, 198);
             button4.FlatAppearance.BorderColor = Color.White;
             button4.FlatAppearance.MouseOverBackColor = Color.FromArgb(103, 177, 198);
             button4.FlatStyle = FlatStyle.Flat;
             button4.Font = new Font("Segoe UI", 20.25F);
-            button4.Location = new Point(75, 316);
+            button4.Location = new Point(72, 340);
             button4.Margin = new Padding(3, 4, 3, 4);
             button4.Name = "button4";
             button4.Size = new Size(195, 80);
@@ -230,12 +235,12 @@
             // 
             // button5
             // 
-            button5.BackColor = Color.White;
+            button5.BackColor = Color.FromArgb(103, 177, 198);
             button5.FlatAppearance.BorderColor = Color.White;
             button5.FlatAppearance.MouseOverBackColor = Color.FromArgb(103, 177, 198);
             button5.FlatStyle = FlatStyle.Flat;
             button5.Font = new Font("Segoe UI", 20.25F);
-            button5.Location = new Point(75, 395);
+            button5.Location = new Point(72, 450);
             button5.Margin = new Padding(3, 4, 3, 4);
             button5.Name = "button5";
             button5.Size = new Size(195, 80);
@@ -247,12 +252,12 @@
             // 
             // button7
             // 
-            button7.BackColor = Color.White;
+            button7.BackColor = Color.FromArgb(103, 177, 198);
             button7.FlatAppearance.BorderColor = Color.White;
             button7.FlatAppearance.MouseOverBackColor = Color.FromArgb(103, 177, 198);
             button7.FlatStyle = FlatStyle.Flat;
             button7.Font = new Font("Segoe UI", 20.25F);
-            button7.Location = new Point(75, 549);
+            button7.Location = new Point(72, 717);
             button7.Margin = new Padding(3, 4, 3, 4);
             button7.Name = "button7";
             button7.Size = new Size(195, 80);
@@ -265,7 +270,7 @@
             // pictureBox4
             // 
             pictureBox4.Image = Properties.Resources.report;
-            pictureBox4.Location = new Point(15, 477);
+            pictureBox4.Location = new Point(1, 578);
             pictureBox4.Margin = new Padding(3, 4, 3, 4);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(59, 63);
@@ -275,12 +280,12 @@
             // 
             // button6
             // 
-            button6.BackColor = Color.White;
+            button6.BackColor = Color.FromArgb(103, 177, 198);
             button6.FlatAppearance.BorderColor = Color.White;
             button6.FlatAppearance.MouseOverBackColor = Color.FromArgb(103, 177, 198);
             button6.FlatStyle = FlatStyle.Flat;
             button6.Font = new Font("Segoe UI", 20.25F);
-            button6.Location = new Point(75, 472);
+            button6.Location = new Point(75, 561);
             button6.Margin = new Padding(3, 4, 3, 4);
             button6.Name = "button6";
             button6.Size = new Size(195, 80);
@@ -294,8 +299,8 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
-            ClientSize = new Size(1247, 935);
+            BackColor = Color.FromArgb(103, 177, 198);
+            ClientSize = new Size(1396, 935);
             Controls.Add(button7);
             Controls.Add(button2);
             Controls.Add(pictureBox3);

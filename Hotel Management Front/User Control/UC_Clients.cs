@@ -50,7 +50,22 @@ namespace Hotel_System_Front.User_Control
             client.Add(cl); ;
             //ClientRepo ClientRepo = new ClientRepo();
 
-            dataGridView1.DataSource = new List<Person> { cl};
+            dataGridView1.DataSource = new List<Person> { cl };
+        }
+
+        private void UC_Clients_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

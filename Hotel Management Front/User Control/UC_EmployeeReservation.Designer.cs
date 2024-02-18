@@ -49,8 +49,9 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.BackgroundColor = Color.Gainsboro;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(63, 391);
+            dataGridView1.Location = new Point(157, 359);
             dataGridView1.Margin = new Padding(3, 4, 3, 4);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
@@ -62,7 +63,7 @@
             // button1
             // 
             button1.BackColor = Color.FromArgb(103, 177, 198);
-            button1.Location = new Point(437, 249);
+            button1.Location = new Point(507, 292);
             button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
             button1.Size = new Size(99, 45);
@@ -109,10 +110,10 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Font = new Font("Baskerville Old Face", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label9.Font = new Font("Microsoft Sans Serif", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label9.Location = new Point(415, 24);
             label9.Name = "label9";
-            label9.Size = new Size(249, 53);
+            label9.Size = new Size(285, 54);
             label9.TabIndex = 73;
             label9.Text = "Reservation";
             // 
@@ -120,7 +121,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(224, 224, 224);
+            BackColor = Color.White;
             Controls.Add(dateTimePicker2);
             Controls.Add(dataGridView1);
             Controls.Add(button1);

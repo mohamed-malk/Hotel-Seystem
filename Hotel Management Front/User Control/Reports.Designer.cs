@@ -42,10 +42,10 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Font = new Font("Baskerville Old Face", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label9.Font = new Font("Microsoft Sans Serif", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label9.Location = new Point(393, 24);
             label9.Name = "label9";
-            label9.Size = new Size(175, 53);
+            label9.Size = new Size(195, 54);
             label9.TabIndex = 33;
             label9.Text = "Reports";
             // 
@@ -56,7 +56,7 @@
             dataGridView1.Margin = new Padding(3, 4, 3, 4);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(889, 236);
+            dataGridView1.Size = new Size(955, 204);
             dataGridView1.TabIndex = 34;
             // 
             // label1
@@ -72,20 +72,20 @@
             // totalLb
             // 
             totalLb.AutoSize = true;
-            totalLb.Font = new Font("Segoe UI Variable Text", 18F, FontStyle.Bold, GraphicsUnit.Point, 161);
+            totalLb.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point, 161);
             totalLb.Location = new Point(292, 454);
             totalLb.Name = "totalLb";
-            totalLb.Size = new Size(81, 40);
+            totalLb.Size = new Size(87, 36);
             totalLb.TabIndex = 36;
             totalLb.Text = "1000";
             // 
             // actualLb
             // 
             actualLb.AutoSize = true;
-            actualLb.Font = new Font("Segoe UI Variable Text", 18F, FontStyle.Bold, GraphicsUnit.Point, 161);
+            actualLb.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point, 161);
             actualLb.Location = new Point(292, 554);
             actualLb.Name = "actualLb";
-            actualLb.Size = new Size(81, 40);
+            actualLb.Size = new Size(87, 36);
             actualLb.TabIndex = 38;
             actualLb.Text = "1000";
             // 
@@ -102,10 +102,10 @@
             // outLb
             // 
             outLb.AutoSize = true;
-            outLb.Font = new Font("Segoe UI Variable Text", 18F, FontStyle.Bold, GraphicsUnit.Point, 161);
+            outLb.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point, 161);
             outLb.Location = new Point(292, 644);
             outLb.Name = "outLb";
-            outLb.Size = new Size(81, 40);
+            outLb.Size = new Size(87, 36);
             outLb.TabIndex = 40;
             outLb.Text = "1000";
             // 

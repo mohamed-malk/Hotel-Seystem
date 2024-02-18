@@ -59,7 +59,7 @@
             // 
             comboBox2.FormattingEnabled = true;
             comboBox2.Items.AddRange(new object[] { "Male", "Female" });
-            comboBox2.Location = new Point(786, 232);
+            comboBox2.Location = new Point(484, 294);
             comboBox2.Margin = new Padding(3, 4, 3, 4);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(151, 28);
@@ -69,7 +69,7 @@
             // 
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "Male", "Female" });
-            comboBox1.Location = new Point(617, 232);
+            comboBox1.Location = new Point(747, 294);
             comboBox1.Margin = new Padding(3, 4, 3, 4);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(151, 28);
@@ -98,10 +98,10 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Font = new Font("Baskerville Old Face", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label9.Font = new Font("Microsoft Sans Serif", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label9.Location = new Point(425, 24);
             label9.Name = "label9";
-            label9.Size = new Size(322, 53);
+            label9.Size = new Size(361, 54);
             label9.TabIndex = 81;
             label9.Text = "Manage Clients";
             // 
@@ -137,8 +137,9 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.BackgroundColor = Color.FromArgb(224, 224, 224);
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(97, 512);
+            dataGridView1.Location = new Point(141, 498);
             dataGridView1.Margin = new Padding(3, 4, 3, 4);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
@@ -159,7 +160,7 @@
             // 
             // Age
             // 
-            Age.Location = new Point(967, 224);
+            Age.Location = new Point(819, 224);
             Age.Margin = new Padding(3, 4, 3, 4);
             Age.Multiline = true;
             Age.Name = "Age";
@@ -169,7 +170,7 @@
             // 
             // Nationality
             // 
-            Nationality.Location = new Point(967, 295);
+            Nationality.Location = new Point(617, 224);
             Nationality.Margin = new Padding(3, 4, 3, 4);
             Nationality.Multiline = true;
             Nationality.Name = "Nationality";
@@ -180,7 +181,7 @@
             // button1
             // 
             button1.BackColor = Color.FromArgb(103, 177, 198);
-            button1.Location = new Point(390, 315);
+            button1.Location = new Point(455, 405);
             button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
             button1.Size = new Size(378, 45);
@@ -193,7 +194,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(224, 224, 224);
+            BackColor = Color.White;
             Controls.Add(Nationality);
             Controls.Add(Age);
             Controls.Add(address);

@@ -13,6 +13,9 @@ namespace Hotel_System_Front.User_Control
             _employee = employee;
         }
 
-   
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
