@@ -26,8 +26,17 @@ namespace Hotel_System_Front.User_Control
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Feedback submitted successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            ClearFeedbackForm();
+            try
+            {
+                MessageBox.Show(@"Feedback submitted successfully!",
+                    @"Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ClearFeedbackForm();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+
+            }
         }
     }
 }

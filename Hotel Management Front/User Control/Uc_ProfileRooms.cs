@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace Hotel_System_Front.User_Control
+﻿namespace Hotel_System_Front.User_Control
 {
     public partial class Uc_ProfileRooms : UserControl
     {
@@ -18,33 +8,46 @@ namespace Hotel_System_Front.User_Control
         {
             InitializeComponent();
             cc = client;
-
         }
 
 
 
         private void Uc_ProfileRooms_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = roomRepo.GetAvailableRooms();
+            try
+            {
+                dataGridView1.DataSource = roomRepo.GetAvailableRooms();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
 
+            }
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
-            UC_ProfileReservation profileReservation = new UC_ProfileReservation();
-            MyProfile Profile = new MyProfile(cc);
-
-            var result = MessageBox.Show("Confirmed?", "confirmed", MessageBoxButtons.YesNo);
-            if (result == DialogResult.Yes)
+            try
             {
-              
-                Profile.addUserControl(profileReservation);
-                this.Hide();
-                Profile.ShowDialog();
-               
-            }
+                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+                UC_ProfileReservation profileReservation = new UC_ProfileReservation();
+                MyProfile Profile = new MyProfile(cc);
 
+                var result = MessageBox.Show("Confirmed?", "confirmed", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+
+                    Profile.addUserControl(profileReservation);
+                    Hide();
+                    Profile.ShowDialog();
+
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+
+            }
         }
     }
 }

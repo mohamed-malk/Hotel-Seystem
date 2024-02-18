@@ -26,35 +26,66 @@ namespace Hotel_System_Front
 
         private void button1_Click(object sender, EventArgs e)
         {
-            addUserControl(uc);
+            try
+            {
+                addUserControl(uc);
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Uc_ProfileRooms uc = new Uc_ProfileRooms(client);
-            addUserControl(uc);
+            try
+            {
+                Uc_ProfileRooms uc = new Uc_ProfileRooms(client);
+                addUserControl(uc);
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
 
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            UC_ProfileReservation uc = new UC_ProfileReservation();
-            addUserControl(uc);
+            }
 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            UC_ProfileFeedback uc = new UC_ProfileFeedback();
-            addUserControl(uc);
+            try
+            {
+                UC_ProfileFeedback uc = new UC_ProfileFeedback();
+                addUserControl(uc);
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+
+            }
         }
 
         private void label7_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Login secondForm = new Login();
-            secondForm.ShowDialog();
-            this.Show();
+            try
+            {
+                this.Hide();
+                Login secondForm = new Login();
+                secondForm.ShowDialog();
+                //this.Show();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+
+            }
+        }
+
+        protected override void OnClosed(EventArgs e)
+        {
+            base.OnClosed(e);
+            Application.Exit();
         }
     }
 }

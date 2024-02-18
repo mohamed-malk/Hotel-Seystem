@@ -23,43 +23,53 @@ namespace Hotel_System_Front.User_Control
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //     int clientId, int roomId,
-            //float amount, DateTime startDate, DateTime endDate
+            try
+            {
+                int clientid = int.Parse(comboBox2.SelectedItem.ToString());
+                int roomid = int.Parse(comboBox1.SelectedItem.ToString());
+                float amount = float.Parse(textBox2.Text);
+                DateTime startDate = dateTimePicker1.Value;
+                DateTime endDate = dateTimePicker2.Value;
 
-            int clientid = int.Parse(comboBox2.SelectedItem.ToString());
-            int roomid = int.Parse(comboBox1.SelectedItem.ToString());
-            float amount = float.Parse(textBox2.Text);
-            DateTime startDate = dateTimePicker1.Value;
-            DateTime endDate = dateTimePicker2.Value;
 
-            
-            reserve.ReserveRoom(clientid, roomid, amount, startDate, endDate);
+                reserve.ReserveRoom(clientid, roomid, amount, startDate, endDate);
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+                
+            }
 
-            MessageBox.Show(clientid.ToString());
         }
 
         private void Uc_Reservation_Load(object sender, EventArgs e)
         {
-
-          
-
-             var rooms = RoomReserve.GetAvailableRooms();
-            foreach (Room room in rooms)
+            try
             {
 
-                comboBox1.Items.Add(room.Id);
-               
-               
-            }
-            
-            var clients = ClientRepo.GetAll();
-            foreach(ClientView client in clients)
-            {
-                comboBox2.Items.Add(client.Id);
-               
-            }
+                var rooms = RoomReserve.GetAvailableRooms();
+                foreach (Room room in rooms)
+                {
 
-            dataGridView1.DataSource = reserve.GetReservationList();
+                    comboBox1.Items.Add(room.Id);
+
+
+                }
+
+                var clients = ClientRepo.GetAll();
+                foreach (ClientView client in clients)
+                {
+                    comboBox2.Items.Add(client.Id);
+
+                }
+
+                dataGridView1.DataSource = reserve.GetReservationList();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+
+            }
         }
     }
 }

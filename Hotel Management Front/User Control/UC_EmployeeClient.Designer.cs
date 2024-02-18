@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             textBox5 = new TextBox();
-            comboBox2 = new ComboBox();
-            comboBox1 = new ComboBox();
             textBox6 = new TextBox();
             textBox1 = new TextBox();
             label9 = new Label();
@@ -42,6 +40,7 @@
             Age = new TextBox();
             Nationality = new TextBox();
             button1 = new Button();
+            gender = new RadioButton();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -54,26 +53,6 @@
             textBox5.PlaceholderText = "Password";
             textBox5.Size = new Size(151, 37);
             textBox5.TabIndex = 94;
-            // 
-            // comboBox2
-            // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "Male", "Female" });
-            comboBox2.Location = new Point(786, 232);
-            comboBox2.Margin = new Padding(3, 4, 3, 4);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(151, 28);
-            comboBox2.TabIndex = 92;
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Male", "Female" });
-            comboBox1.Location = new Point(617, 232);
-            comboBox1.Margin = new Padding(3, 4, 3, 4);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(151, 28);
-            comboBox1.TabIndex = 91;
             // 
             // textBox6
             // 
@@ -169,7 +148,7 @@
             // 
             // Nationality
             // 
-            Nationality.Location = new Point(967, 295);
+            Nationality.Location = new Point(786, 232);
             Nationality.Margin = new Padding(3, 4, 3, 4);
             Nationality.Multiline = true;
             Nationality.Name = "Nationality";
@@ -180,7 +159,7 @@
             // button1
             // 
             button1.BackColor = Color.FromArgb(103, 177, 198);
-            button1.Location = new Point(390, 315);
+            button1.Location = new Point(442, 318);
             button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
             button1.Size = new Size(378, 45);
@@ -189,17 +168,27 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
+            // gender
+            // 
+            gender.AutoSize = true;
+            gender.Location = new Point(644, 237);
+            gender.Name = "gender";
+            gender.Size = new Size(63, 24);
+            gender.TabIndex = 98;
+            gender.TabStop = true;
+            gender.Text = "Male";
+            gender.UseVisualStyleBackColor = true;
+            // 
             // UC_EmployeeClient
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(224, 224, 224);
+            Controls.Add(gender);
             Controls.Add(Nationality);
             Controls.Add(Age);
             Controls.Add(address);
             Controls.Add(textBox5);
-            Controls.Add(comboBox2);
-            Controls.Add(comboBox1);
             Controls.Add(textBox6);
             Controls.Add(textBox1);
             Controls.Add(label9);
@@ -220,8 +209,6 @@
         #endregion
 
         private TextBox textBox5;
-        private ComboBox comboBox2;
-        private ComboBox comboBox1;
         private TextBox textBox6;
         private TextBox textBox1;
         private Label label9;
@@ -233,5 +220,6 @@
         private TextBox Age;
         private TextBox Nationality;
         private Button button1;
+        private RadioButton gender;
     }
 }

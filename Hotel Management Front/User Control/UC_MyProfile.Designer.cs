@@ -49,124 +49,134 @@
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Baskerville Old Face", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label9.Location = new Point(364, 18);
+            label9.Location = new Point(416, 24);
             label9.Name = "label9";
-            label9.Size = new Size(184, 43);
+            label9.Size = new Size(230, 53);
             label9.TabIndex = 52;
             label9.Text = "My Profile";
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(127, 103);
+            dataGridView1.Location = new Point(145, 137);
+            dataGridView1.Margin = new Padding(3, 4, 3, 4);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(389, 212);
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(445, 283);
             dataGridView1.TabIndex = 53;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // button1
             // 
             button1.BackColor = Color.FromArgb(103, 177, 198);
-            button1.Location = new Point(575, 127);
+            button1.Location = new Point(657, 169);
+            button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
-            button1.Size = new Size(90, 34);
+            button1.Size = new Size(103, 45);
             button1.TabIndex = 54;
             button1.Text = "Update";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
             button2.BackColor = Color.FromArgb(103, 177, 198);
-            button2.Location = new Point(575, 196);
+            button2.Location = new Point(657, 261);
+            button2.Margin = new Padding(3, 4, 3, 4);
             button2.Name = "button2";
-            button2.Size = new Size(90, 34);
+            button2.Size = new Size(103, 45);
             button2.TabIndex = 55;
             button2.Text = "Save";
             button2.UseVisualStyleBackColor = false;
             // 
             // name
             // 
-            name.Location = new Point(747, 54);
+            name.Location = new Point(854, 72);
+            name.Margin = new Padding(3, 4, 3, 4);
             name.Name = "name";
-            name.Size = new Size(100, 23);
+            name.Size = new Size(114, 27);
             name.TabIndex = 56;
             // 
             // password
             // 
-            password.Location = new Point(747, 113);
+            password.Location = new Point(854, 151);
+            password.Margin = new Padding(3, 4, 3, 4);
             password.Name = "password";
-            password.Size = new Size(100, 23);
+            password.Size = new Size(114, 27);
             password.TabIndex = 57;
             // 
             // address
             // 
-            address.Location = new Point(747, 178);
+            address.Location = new Point(854, 237);
+            address.Margin = new Padding(3, 4, 3, 4);
             address.Name = "address";
-            address.Size = new Size(100, 23);
+            address.Size = new Size(114, 27);
             address.TabIndex = 58;
             // 
             // phone
             // 
-            phone.Location = new Point(747, 243);
+            phone.Location = new Point(854, 324);
+            phone.Margin = new Padding(3, 4, 3, 4);
             phone.Name = "phone";
-            phone.Size = new Size(100, 23);
+            phone.Size = new Size(114, 27);
             phone.TabIndex = 59;
             // 
             // nationality
             // 
-            nationality.Location = new Point(747, 310);
+            nationality.Location = new Point(854, 413);
+            nationality.Margin = new Padding(3, 4, 3, 4);
             nationality.Name = "nationality";
-            nationality.Size = new Size(100, 23);
+            nationality.Size = new Size(114, 27);
             nationality.TabIndex = 60;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(685, 64);
+            label1.Location = new Point(783, 85);
             label1.Name = "label1";
-            label1.Size = new Size(39, 15);
+            label1.Size = new Size(49, 20);
             label1.TabIndex = 61;
             label1.Text = "Name";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(678, 118);
+            label2.Location = new Point(775, 157);
             label2.Name = "label2";
-            label2.Size = new Size(57, 15);
+            label2.Size = new Size(70, 20);
             label2.TabIndex = 62;
             label2.Text = "Password";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(682, 181);
+            label3.Location = new Point(779, 241);
             label3.Name = "label3";
-            label3.Size = new Size(49, 15);
+            label3.Size = new Size(62, 20);
             label3.TabIndex = 63;
             label3.Text = "Address";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(683, 246);
+            label4.Location = new Point(781, 328);
             label4.Name = "label4";
-            label4.Size = new Size(41, 15);
+            label4.Size = new Size(50, 20);
             label4.TabIndex = 64;
             label4.Text = "Phone";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(676, 313);
+            label5.Location = new Point(773, 417);
             label5.Name = "label5";
-            label5.Size = new Size(65, 15);
+            label5.Size = new Size(82, 20);
             label5.TabIndex = 65;
             label5.Text = "Nationality";
             // 
             // UC_MyProfile
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(224, 224, 224);
             Controls.Add(label5);
@@ -183,8 +193,9 @@
             Controls.Add(button1);
             Controls.Add(dataGridView1);
             Controls.Add(label9);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "UC_MyProfile";
-            Size = new Size(1096, 638);
+            Size = new Size(1253, 851);
             Load += UC_MyProfile_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);

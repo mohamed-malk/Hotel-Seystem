@@ -19,73 +19,82 @@ namespace Hotel_System_Front
             this.Show();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
 
 
-            if (string.IsNullOrEmpty(Username.Text.Trim()))
-
+            try
             {
-                errorProvider1.SetError(Username, "User is required");
-                return;
-            }
-            else
-            {
-                errorProvider1.SetError(Username, string.Empty);
-            }
+                if (string.IsNullOrEmpty(Username.Text.Trim()))
 
-            if (string.IsNullOrEmpty(Password.Text.Trim()))
-
-            {
-                errorProvider1.SetError(Password, "Please Enter Password");
-                return;
-            }
-            else
-            {
-                errorProvider1.SetError(Password, string.Empty);
-            }
-
-            Person? person = personRepo.Login(Username.Text, Password.Text);
-
-            if (person != null)
-            {
-                if (person.ObjectName == UserType.Client)
                 {
-                    this.Hide();
-                    MyProfile secondForm = new MyProfile((Client)person);
-                    secondForm.ShowDialog();
-                    this.Show();
+                    errorProvider1.SetError(Username, "User is required");
+                    return;
                 }
-                else if (person.ObjectName == UserType.Employee)
+                else
                 {
-                    if (person.Id == Employee.ManagerId)
+                    errorProvider1.SetError(Username, string.Empty);
+                }
+
+                if (string.IsNullOrEmpty(Password.Text.Trim()))
+
+                {
+                    errorProvider1.SetError(Password, "Please Enter Password");
+                    return;
+                }
+                else
+                {
+                    errorProvider1.SetError(Password, string.Empty);
+                }
+
+                Person? person = personRepo.Login(Username.Text, Password.Text);
+
+                if (person != null)
+                {
+                    if (person.ObjectName == UserType.Client)
                     {
                         this.Hide();
-                        main secondForm = new main((Employee)person);
+                        MyProfile secondForm = new MyProfile((Client)person);
                         secondForm.ShowDialog();
-                        this.Show();
-
+                        //this.Show();
                     }
-                    else
+                    else if (person.ObjectName == UserType.Employee)
                     {
-                        this.Hide();
-                        EmployeeForm secondForm = new((Employee)person);
-                        secondForm.ShowDialog();
-                        this.Show();
+                        if (person.Id == Employee.ManagerId)
+                        {
+                            this.Hide();
+                            main secondForm = new main((Employee)person);
+                            secondForm.ShowDialog();
+                            //this.Show();
+
+                        }
+                        else
+                        {
+                            this.Hide();
+                            EmployeeForm secondForm = new((Employee)person);
+                            secondForm.ShowDialog();
+                            //this.Show();
+                        }
                     }
                 }
+                else
+                {
+                    MessageBox.Show("Incorrect username or password");
+                }
+
             }
-            else
+            catch (Exception exception)
             {
-                MessageBox.Show("Incorrect username or password");
+                MessageBox.Show(exception.Message);
+
             }
         }
 
+        protected override void OnClosed(EventArgs e)
+        {
+            base.OnClosed(e);
+            Application.Exit();
+        }
         private void Username_TextChanged(object sender, EventArgs e)
         {
 

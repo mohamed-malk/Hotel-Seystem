@@ -18,5 +18,10 @@
         private void UC_MyProfile_Load(object sender, EventArgs e) =>
             dataGridView1.DataSource =
                 new List<Client> { _currentClient };
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
